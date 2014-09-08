@@ -1,0 +1,34 @@
+
+.desktop {
+  background-color: #3A6EA5;
+  font-size: 8px;
+  font-family: Tahoma,"Microsoft Sans Serif","MS Sans Serif",sans-serif;
+}
+
+.window {
+  background-color: #D4D0C8;
+  color: #000000;
+}
+
+.menu {
+  background-color: #D4D0C8;
+}
+
+.disabled {
+  color: #808080;
+}
+
+.selected {
+  background-color: #0A246A;
+  color: #FFFFFF;
+}
+
+.titlebar .titlebar-title {
+  background-color: #0A246A;
+  background-image: linear-gradient(to right, #0A246A, #A6CAF0);
+  color: #FFFFFF;
+}
+
+.titlebar .button-wrapper {
+  background-color: #A6CAF0;
+}

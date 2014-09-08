@@ -1,0 +1,67 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+.menu {
+  width: 100%;
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.menu li {
+  /* float: left; */
+  display: inline-block;
+  padding: 2px 5px;
+}
+
+.titlebar {
+  width: 100%;
+  margin: 0px;
+  padding: 1px;
+  position: relative;
+  overflow: hidden;
+  display: table;
+  max-height: calc(1em + 2px);
+}
+
+.titlebar .titlebar-icon {
+  width: 16px;
+  height: 16px;
+  float: left;
+  display: table-cell;
+}
+
+.titlebar .titlebar-title {
+  display: table-cell;
+  padding: 0px 1px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.titlebar .titlebar-wincontrols {
+  display: table-cell;
+  margin: 0px;
+  padding: 1px;
+}
+
+.titlebar-wincontrols .buttons-wrapper {
+  display: inline-block;
+  width: auto;
+  margin: 0px;
+  padding: 0px;
+  min-width: fit-content;
+  max-height: calc(1em + 2px);
+  /*
+  position: absolute;
+  right: 0px;
+  float: right;
+  */
+}
+
+.titlebar .button {
+  display: inline-block;
+  width: 12px;
+  height: 10px;
+}
+

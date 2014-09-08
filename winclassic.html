@@ -6,20 +6,63 @@
 
 <html lang="en">
 <head>
-<title>Windows Classic Colour Scheme </title>
 
-<meta charset="utf-8" />
+  <title>Windows Classic Theme Designer</title>
 
-<link type="stylesheet" type="text/css" href="./css/page.css" />
-<link type="stylesheet" type="text/css" href="./css/desktop.css" />
+  <meta charset="utf-8" />
+  <meta name="author" content="tPenguinLTG" />
 
-<script type="text/javascript" src="./js/update.js"></script>
+  <link rel="stylesheet" type="text/css" href="./css/page.css" />
+  <link rel="stylesheet" type="text/css" href="./css/themes/windows-standard.css" />
+  <link rel="stylesheet" type="text/css" href="./css/winclassic.css" />
+  <link rel="stylesheet" type="text/css" href="./css/preview.css" />
+
+  <script type="text/javascript" src="./js/update.js"></script>
+
 </head>
-
 <body>
-<div id="desktop">
-</div>
-<div id="controls">
-</div>
+
+  <header>
+    <h1>Windows Classic Theme Designer</h1>
+  </header>
+
+  <!-- Preview area -->
+  <div id="preview" class="desktop">
+
+    <!-- Inactive window -->
+    <div id="window-inactive" class="window inactive">
+    </div>
+
+    <!-- Active window -->
+    <div id="window-active" class="window active">
+      <!-- Titlebar -->
+      <div class="titlebar">
+        <span class="titlebar-title">Active Window</span>
+        <div class="titlebar-wincontrols">
+          <ul class="buttons-wrapper">
+            <li class="button minimize">_</li>
+            <li class="button maximize">+</li>
+            <li class="button close">x</li>
+          </ul>
+        </div>
+      </div>
+
+        <!-- Menu bar -->
+      <ul class="menu">
+        <li>Normal</li>
+        <li class="disabled">Disabled</li>
+        <li class="selected">Selected</li>
+      </ul>
+    </div>
+
+    <!-- Dialog -->
+    <div id="window-dialog" class="window modal active">
+    </div>
+  </div>
+  
+  <div id="controls">
+  </div>
+
 </body>
 </html>
+
