@@ -40,23 +40,37 @@
         <span class="titlebar-title">Active Window</span>
         <div class="titlebar-wincontrols">
           <ul class="buttons-wrapper">
-            <li class="button minimize">_</li>
-            <li class="button maximize">+</li>
-            <li class="button close">x</li>
+            <li class="button minimize">_</li><li class="button maximize">+</li><li class="spacer"></li><li class="button close">x</li>
           </ul>
         </div>
       </div>
 
+      <div class="window-content">
         <!-- Menu bar -->
-      <ul class="menu">
-        <li>Normal</li>
-        <li class="disabled">Disabled</li>
-        <li class="selected">Selected</li>
-      </ul>
+        <ul class="menu">
+          <li>Normal</li>
+          <li class="disabled">Disabled</li>
+          <li class="selected">Selected</li>
+        </ul>
+      </div>
     </div>
 
     <!-- Dialog -->
     <div id="window-dialog" class="window modal active">
+      <!-- Titlebar -->
+      <div class="titlebar">
+        <span class="titlebar-title">Message Box</span>
+        <div class="titlebar-wincontrols">
+          <ul class="buttons-wrapper">
+            </li><li class="button close">x</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Message -->
+      <div class="window-content">
+        Message Text
+      </div>
     </div>
   </div>
   

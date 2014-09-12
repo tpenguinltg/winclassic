@@ -37,3 +37,9 @@
   background-color: #A6CAF0;
   font-size: 8px;
 }
+
+.titlebar-wincontrols .button {
+  box-shadow:
+    1px 1px 0px #808080,
+    2px 2px 0px #404040;
+}

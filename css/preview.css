@@ -9,6 +9,7 @@
   margin: 0em 1em;
   border-style: inset;
   border-width: 2px;
+  position: relative;
 }
 
 #window-inactive {
@@ -19,4 +20,11 @@
 #window-active {
   width: 387px;
   height:;
+}
+
+#window-dialog {
+  width: 237px;
+  height: 78px;
+  left: 23px;
+  top: 134px;
 }

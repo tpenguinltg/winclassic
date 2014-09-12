@@ -1,17 +1,24 @@
 
 .desktop {
   background-color: #3A6EA5;
-  font-size: 8px;
   font-family: Tahoma,"Microsoft Sans Serif","MS Sans Serif",sans-serif;
 }
+
 
 .window {
   background-color: #D4D0C8;
   color: #000000;
+  box-shadow:
+    -0.5px -0.5px 0px 0.5px #FFFFFF,            /* ButtonHilight */
+    0px 0px 0px 1px #808080,                    /* ButtonShadow */
+    -0.5px -0.5px 0px 1.5px rgb(212,208,200),   /* ButtonLight */
+    0px 0px 0px 2px #404040;                    /* ButtonDkShadow */
+  font-size: 8px;
 }
 
 .menu {
   background-color: #D4D0C8;
+  font-size: 8px;
 }
 
 .disabled {
@@ -23,12 +30,35 @@
   color: #FFFFFF;
 }
 
+.titlebar .titlebar-icon {
+  background-color: #0A246A;
+}
+
 .titlebar .titlebar-title {
+  font-size: 8px;
+  font-weight: bold;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.window.active .titlebar .titlebar-title {
   background-color: #0A246A;
   background-image: linear-gradient(to right, #0A246A, #A6CAF0);
   color: #FFFFFF;
 }
 
-.titlebar .button-wrapper {
+.titlebar .titlebar-wincontrols, .titlebar-wincontrols .buttons-wrapper {
   background-color: #A6CAF0;
+  font-size: 8px;
+  font-weight: bold;
+}
+
+.button {
+  background-color: #D4D0C8;
+  box-shadow:
+    -0.5px -0.5px 0px 0.5px rgb(212,208,200),   /* ButtonLight */
+    0px 0px 0px 1px #808080,                    /* ButtonShadow */
+    -0.5px -0.5px 0px 1.5px #FFFFFF,            /* ButtonHilight */
+    0px 0px 0px 2px #404040;                    /* ButtonDkShadow */
 }
