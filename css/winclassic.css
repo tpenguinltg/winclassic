@@ -117,9 +117,16 @@
   margin: 2px;
 }
 
-.button:active {
+.button span.button-content {
+  display: inline-block;
+}
+
+.button:active .button-content{
+  /*
   padding-top: 1px;
   padding-left: 1px;
   margin-bottom: 1px;
   margin-right: 1px;
-
+  */
+  transform: translate(1px, 1px);
+}
