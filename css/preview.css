@@ -28,3 +28,7 @@
   left: 23px;
   top: 134px;
 }
+
+.titlebar-wincontrols .button svg {
+  fill: #000000;
+}

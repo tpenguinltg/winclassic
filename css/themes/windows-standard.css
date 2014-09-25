@@ -1,3 +1,6 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 .desktop {
   background-color: #3A6EA5;
@@ -16,7 +19,7 @@
   font-size: 8px;
 }
 
-.menu {
+.menubar {
   background-color: #D4D0C8;
   font-size: 8px;
 }
@@ -36,10 +39,9 @@
 
 .titlebar .titlebar-title {
   font-size: 8px;
+  height: 18px;
+  line-height: 18px;
   font-weight: bold;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
 }
 
 .window.active .titlebar .titlebar-title {
@@ -61,4 +63,12 @@
     0px 0px 0px 1px #808080,                    /* ButtonShadow */
     -0.5px -0.5px 0px 1.5px #FFFFFF,            /* ButtonHilight */
     0px 0px 0px 2px #404040;                    /* ButtonDkShadow */
+}
+
+.button:active {
+  box-shadow:
+    -0.5px -0.5px 0px 0.5px #808080,   /* ButtonLight */
+    0px 0px 0px 1px rgb(212,208,200),                    /* ButtonShadow */
+    -0.5px -0.5px 0px 1.5px #404040,            /* ButtonHilight */
+    0px 0px 0px 2px #FFFFFF;                    /* ButtonDkShadow */
 }

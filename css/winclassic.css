@@ -4,16 +4,50 @@
 
 .window {
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  cursor: default;
 }
 
-.menu {
+.modal .window-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.window-content, .modal-content {
+  flex-grow: 1;
+}
+
+.window.modal .window-content .modal-controls .buttons-wrapper {
+  /*
+  position: absolute;
+  bottom: 0px;
+  margin: 6px auto;
+  */
+}
+
+.window.modal .window-content .modal-controls .buttons-wrapper {
+  text-align: center;
+  padding: 0px;
+}
+
+.window-content .button {
+  display: inline-block;
+  min-width: 68px;
+  min-height: 20px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 20px;
+}
+
+.menubar {
   width: 100%;
   list-style-type: none;
   margin: 0px;
   padding: 0px;
 }
 
-.menu li {
+.menubar li {
   /* float: left; */
   display: inline-block;
   padding: 2px 5px;
@@ -37,8 +71,8 @@
   display: block;
   padding: 0px 1px;
   overflow: hidden;
-  height: 18px;
-  line-height: 18px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
   vertical-align: middle;
   flex-grow: 1;
 }
@@ -54,7 +88,7 @@
   display: inline-block;
   width: auto;
   margin: 0px;
-  padding: 0px;
+  padding: 1px;
 }
 
 .titlebar-wincontrols .spacer {
@@ -66,10 +100,26 @@
 
 .titlebar-wincontrols .button {
   display: inline-block;
+  min-width: 12px;
+  min-height: 10px;
   width: 12px;
   height: 10px;
-  margin: 2px;
   text-align: center;
   vertical-align: middle;
+  line-height: 10px;
 }
+
+.window.modal .window-content {
+  padding: 2px;
+}
+
+.button {
+  margin: 2px;
+}
+
+.button:active {
+  padding-top: 1px;
+  padding-left: 1px;
+  margin-bottom: 1px;
+  margin-right: 1px;
 
