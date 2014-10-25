@@ -1,74 +1,66 @@
-/* This Source Code Form is subject to the terms of the Mozilla Public
- * License, v. 2.0. If a copy of the MPL was not distributed with this
- * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
-
+/* Windows Standard
+ * Microsoft
+ */
+/********** Colors **********/
 .desktop {
-  background-color: #3A6EA5;
-  font-family: Tahoma,"Microsoft Sans Serif","MS Sans Serif",sans-serif;
-}
-
+  background-color: #3a6ea5;
+  font-family: Tahoma,"Microsoft Sans Serif","MS Sans Serif",sans-serif; }
 
 .window {
-  background-color: #D4D0C8;
-  color: #000000;
-  box-shadow:
-    -0.5px -0.5px 0px 0.5px #FFFFFF,            /* ButtonHilight */
-    0px 0px 0px 1px #808080,                    /* ButtonShadow */
-    -0.5px -0.5px 0px 1.5px rgb(212,208,200),   /* ButtonLight */
-    0px 0px 0px 2px #404040;                    /* ButtonDkShadow */
-  font-size: 8px;
-}
+  background-color: #d4d0c8;
+  color: black;
+  border-color: #d4d0c8;
+  box-shadow: -0.5px -0.5px 0px 0.5px white, 0px 0px 0px 1px gray, -0.5px -0.5px 0px 1.5px #d4d0c8, 0px 0px 0px 2px #404040;
+  font-size: 8px; }
 
 .menubar {
-  background-color: #D4D0C8;
-  font-size: 8px;
-}
+  background-color: #d4d0c8;
+  font-size: 8px; }
 
 .disabled {
-  color: #808080;
-}
+  color: gray; }
 
 .selected {
-  background-color: #0A246A;
-  color: #FFFFFF;
-}
-
-.titlebar .titlebar-icon {
-  background-color: #0A246A;
-}
+  background-color: #0a246a;
+  color: white; }
 
 .titlebar .titlebar-title {
   font-size: 8px;
   height: 18px;
   line-height: 18px;
-  font-weight: bold;
-}
-
-.window.active .titlebar .titlebar-title {
-  background-color: #0A246A;
-  background-image: linear-gradient(to right, #0A246A, #A6CAF0);
-  color: #FFFFFF;
-}
-
-.titlebar .titlebar-wincontrols, .titlebar-wincontrols .buttons-wrapper {
-  background-color: #A6CAF0;
-  font-size: 8px;
-  font-weight: bold;
-}
+  font-weight: bold; }
 
 .button {
-  background-color: #D4D0C8;
-  box-shadow:
-    -0.5px -0.5px 0px 0.5px rgb(212,208,200),   /* ButtonLight */
-    0px 0px 0px 1px #808080,                    /* ButtonShadow */
-    -0.5px -0.5px 0px 1.5px #FFFFFF,            /* ButtonHilight */
-    0px 0px 0px 2px #404040;                    /* ButtonDkShadow */
-}
+  background-color: #d4d0c8;
+  color: black;
+  box-shadow: -0.5px -0.5px 0px 0.5px #d4d0c8, 0px 0px 0px 1px gray, -0.5px -0.5px 0px 1.5px white, 0px 0px 0px 2px #404040; }
+  .button:active {
+    box-shadow: -0.5px -0.5px 0px 0.5px gray, 0px 0px 0px 1px #d4d0c8, -0.5px -0.5px 0px 1.5px #404040, 0px 0px 0px 2px white; }
 
-.button:active {
-  box-shadow:
-    -0.5px -0.5px 0px 0.5px #808080,   /* ButtonLight */
-    0px 0px 0px 1px rgb(212,208,200),                    /* ButtonShadow */
-    -0.5px -0.5px 0px 1.5px #404040,            /* ButtonHilight */
-    0px 0px 0px 2px #FFFFFF;                    /* ButtonDkShadow */
-}
+/* Active Window */
+.window.active .titlebar .titlebar-icon {
+  background-color: #0a246a;
+  color: white; }
+.window.active .titlebar .titlebar-title {
+  background-color: #0a246a;
+  background-image: linear-gradient(to right, #0a246a, #a6caf0);
+  color: white; }
+.window.active .titlebar .titlebar-wincontrols, .window.active .titlebar .titlebar-wincontrols .buttons-wrapper {
+  background-color: #a6caf0;
+  font-size: 8px;
+  font-weight: bold; }
+
+/* Inactive Window */
+.window.inactive .titlebar .titlebar-icon {
+  background-color: gray;
+  color: #d4d0c8; }
+.window.inactive .titlebar .titlebar-title {
+  background-color: gray;
+  background-image: linear-gradient(to right, gray, silver);
+  color: #d4d0c8; }
+.window.inactive .titlebar .titlebar-wincontrols, .window.inactive .titlebar .titlebar-wincontrols .buttons-wrapper {
+  background-color: silver;
+  font-size: 8px;
+  font-weight: bold; }
+
+/*# sourceMappingURL=windows-standard.css.map */

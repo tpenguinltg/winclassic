@@ -1,45 +1,66 @@
-
+/* Windows Standard
+ * Microsoft
+ */
+/********** Colors **********/
 .desktop {
-  background-color: #3A6EA5;
-  font-family: Tahoma,"Microsoft Sans Serif","MS Sans Serif",sans-serif;
-}
+  background-color: #3a6ea5;
+  font-family: Tahoma,"Microsoft Sans Serif","MS Sans Serif",sans-serif; }
 
 .window {
-  background-color: #D4D0C8;
-  color: #000000;
-}
+  background-color: silver;
+  color: black;
+  border-color: silver;
+  box-shadow: -0.5px -0.5px 0px 0.5px white, 0px 0px 0px 1px gray, -0.5px -0.5px 0px 1.5px silver, 0px 0px 0px 2px black;
+  font-size: 8px; }
 
-.menu {
-  background-color: #D4D0C8;
-  font-size: 8px;
-}
+.menubar {
+  background-color: silver;
+  font-size: 8px; }
 
 .disabled {
-  color: #808080;
-}
+  color: gray; }
 
 .selected {
-  background-color: #0A246A;
-  color: #FFFFFF;
-}
+  background-color: navy;
+  color: white; }
 
 .titlebar .titlebar-title {
-  background-color: #0A246A;
-  background-image: linear-gradient(to right, #0A246A, #A6CAF0);
-  color: #FFFFFF;
   font-size: 8px;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
+  height: 18px;
+  line-height: 18px;
+  font-weight: bold; }
 
-.titlebar .titlebar-wincontrols {
-  background-color: #A6CAF0;
+.button {
+  background-color: silver;
+  color: black;
+  box-shadow: -0.5px -0.5px 0px 0.5px silver, 0px 0px 0px 1px gray, -0.5px -0.5px 0px 1.5px white, 0px 0px 0px 2px black; }
+  .button:active {
+    box-shadow: -0.5px -0.5px 0px 0.5px gray, 0px 0px 0px 1px silver, -0.5px -0.5px 0px 1.5px black, 0px 0px 0px 2px white; }
+
+/* Active Window */
+.window.active .titlebar .titlebar-icon {
+  background-color: navy;
+  color: white; }
+.window.active .titlebar .titlebar-title {
+  background-color: navy;
+  background-image: linear-gradient(to right, navy, #1084d0);
+  color: white; }
+.window.active .titlebar .titlebar-wincontrols, .window.active .titlebar .titlebar-wincontrols .buttons-wrapper {
+  background-color: #1084d0;
   font-size: 8px;
-}
+  font-weight: bold; }
 
-.titlebar-wincontrols .button {
-  box-shadow:
-    1px 1px 0px #808080,
-    2px 2px 0px #404040;
-}
+/* Inactive Window */
+.window.inactive .titlebar .titlebar-icon {
+  background-color: gray;
+  color: silver; }
+.window.inactive .titlebar .titlebar-title {
+  background-color: gray;
+  background-image: linear-gradient(to right, gray, #b5b5b5);
+  color: silver; }
+.window.inactive .titlebar .titlebar-wincontrols, .window.inactive .titlebar .titlebar-wincontrols .buttons-wrapper {
+  background-color: #b5b5b5;
+  font-size: 8px;
+  font-weight: bold; }
+
+/*# sourceMappingURL=windows-classic.css.map */
