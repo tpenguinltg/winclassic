@@ -10,12 +10,12 @@
   background-color: silver;
   color: black;
   border-color: silver;
-  box-shadow: -0.5px -0.5px 0px 0.5px white, 0px 0px 0px 1px gray, -0.5px -0.5px 0px 1.5px silver, 0px 0px 0px 2px black;
-  font-size: 8px; }
+  font-size: 10px;
+  box-shadow: -0.5px -0.5px 0px 0.5px white, 0px 0px 0px 1px gray, -0.5px -0.5px 0px 1.5px silver, 0px 0px 0px 2px black; }
 
 .menubar {
   background-color: silver;
-  font-size: 8px; }
+  font-size: 10px; }
 
 .disabled {
   color: gray; }
@@ -25,7 +25,7 @@
   color: white; }
 
 .titlebar .titlebar-title {
-  font-size: 8px;
+  font-size: 10px;
   height: 18px;
   line-height: 18px;
   font-weight: bold; }
@@ -38,9 +38,11 @@
     box-shadow: -0.5px -0.5px 0px 0.5px gray, 0px 0px 0px 1px silver, -0.5px -0.5px 0px 1.5px black, 0px 0px 0px 2px white; }
 
 .text-pane {
+  margin: 2px 0;
   padding: 2px;
   background-color: white;
-  color: black; }
+  color: black;
+  box-shadow: -0.5px -0.5px 0px 0.5px black, 0px 0px 0px 1px silver, -0.5px -0.5px 0px 1.5px gray, 0px 0px 0px 2px white; }
   .text-pane p {
     margin: 0; }
 
@@ -57,7 +59,7 @@
   color: white; }
 .window.active .titlebar .titlebar-wincontrols, .window.active .titlebar .titlebar-wincontrols .buttons-wrapper {
   background-color: #1084d0;
-  font-size: 8px;
+  font-size: 10px;
   font-weight: bold; }
 
 /* Inactive Window */
@@ -70,7 +72,7 @@
   color: silver; }
 .window.inactive .titlebar .titlebar-wincontrols, .window.inactive .titlebar .titlebar-wincontrols .buttons-wrapper {
   background-color: #b5b5b5;
-  font-size: 8px;
+  font-size: 10px;
   font-weight: bold; }
 
 /*# sourceMappingURL=windows-classic.css.map */

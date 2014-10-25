@@ -77,7 +77,7 @@
 
 .titlebar .titlebar-title {
   display: block;
-  padding: 0px 1px;
+  padding: 0px 2px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;

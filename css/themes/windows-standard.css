@@ -10,13 +10,12 @@
   background-color: #d4d0c8;
   color: black;
   border-color: #d4d0c8;
-  font-size: 8px;
+  font-size: 10px;
   box-shadow: -0.5px -0.5px 0px 0.5px white, 0px 0px 0px 1px gray, -0.5px -0.5px 0px 1.5px #d4d0c8, 0px 0px 0px 2px #404040; }
 
 .menubar {
   background-color: #d4d0c8;
-  font-size: 8px;
-  margin-bottom: 1px; }
+  font-size: 10px; }
 
 .disabled {
   color: gray; }
@@ -26,7 +25,7 @@
   color: white; }
 
 .titlebar .titlebar-title {
-  font-size: 8px;
+  font-size: 10px;
   height: 18px;
   line-height: 18px;
   font-weight: bold; }
@@ -60,7 +59,7 @@
   color: white; }
 .window.active .titlebar .titlebar-wincontrols, .window.active .titlebar .titlebar-wincontrols .buttons-wrapper {
   background-color: #a6caf0;
-  font-size: 8px;
+  font-size: 10px;
   font-weight: bold; }
 
 /* Inactive Window */
@@ -73,7 +72,7 @@
   color: #d4d0c8; }
 .window.inactive .titlebar .titlebar-wincontrols, .window.inactive .titlebar .titlebar-wincontrols .buttons-wrapper {
   background-color: silver;
-  font-size: 8px;
+  font-size: 10px;
   font-weight: bold; }
 
 /*# sourceMappingURL=windows-standard.css.map */

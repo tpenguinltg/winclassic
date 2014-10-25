@@ -40,13 +40,13 @@
   background-color: $ButtonFace;
   color: $WindowText;
   border-color: $ActiveBorder;
-  font-size: 8px;
+  font-size: 10px;
   @include window-outset;
 }
 
 .menubar {
   background-color: $Menu;
-  font-size: 8px;
+  font-size: 10px;
 }
 
 .disabled {
@@ -59,7 +59,7 @@
 }
 
 .titlebar .titlebar-title {
-  font-size: 8px;
+  font-size: 10px;
   height: 18px;
   line-height: 18px;
   font-weight: bold;
@@ -109,7 +109,7 @@
 
     .titlebar-wincontrols, .titlebar-wincontrols .buttons-wrapper {
       background-color: $GradientActiveTitle;
-      font-size: 8px;
+      font-size: 10px;
       font-weight: bold;
     }
   }//end .titlebar
@@ -134,7 +134,7 @@
 
     .titlebar-wincontrols, .titlebar-wincontrols .buttons-wrapper {
       background-color: $GradientInactiveTitle;
-      font-size: 8px;
+      font-size: 10px;
       font-weight: bold;
     }
       
