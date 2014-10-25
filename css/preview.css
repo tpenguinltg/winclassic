@@ -13,15 +13,17 @@
 }
 
 #window-inactive {
-  width:;
-  height:;
+  width: 369px;
+  height: 172px;
+  top: 12px;
+  left: 12px;
 }
 
 #window-active {
   width: 387px;
   height: 155px;
-  top: 33px;
-  left: 14px;
+  top: 35px;
+  left: 16px;
 }
 
 #window-dialog {
