@@ -1,0 +1,77 @@
+/********** Colors **********/
+.desktop {
+  background-color: #004040;
+  font-family: Tahoma,"Microsoft Sans Serif","MS Sans Serif",sans-serif; }
+
+.window {
+  background-color: #404040;
+  color: white;
+  border-color: #404040;
+  font-size: 10px;
+  box-shadow: -0.5px -0.5px 0px 0.5px gray, 0px 0px 0px 1px #202020, -0.5px -0.5px 0px 1.5px #606060, 0px 0px 0px 2px black; }
+
+.menubar {
+  background-color: #404040;
+  font-size: 10px; }
+
+.disabled {
+  color: gray; }
+
+.selected {
+  background-color: white;
+  color: navy; }
+
+.titlebar .titlebar-title {
+  font-size: 10px;
+  height: 18px;
+  line-height: 18px;
+  font-weight: bold; }
+
+.button {
+  background-color: #404040;
+  color: white;
+  box-shadow: -0.5px -0.5px 0px 0.5px #606060, 0px 0px 0px 1px #202020, -0.5px -0.5px 0px 1.5px gray, 0px 0px 0px 2px black; }
+  .button:active {
+    box-shadow: -0.5px -0.5px 0px 0.5px #202020, 0px 0px 0px 1px #606060, -0.5px -0.5px 0px 1.5px black, 0px 0px 0px 2px gray; }
+  .button svg {
+    fill: white; }
+
+.text-pane {
+  margin: 2px 0;
+  padding: 2px;
+  background-color: black;
+  color: white;
+  box-shadow: -0.5px -0.5px 0px 0.5px black, 0px 0px 0px 1px #606060, -0.5px -0.5px 0px 1.5px #202020, 0px 0px 0px 2px gray; }
+  .text-pane p {
+    margin: 0; }
+
+.monospace {
+  font-family: "Lucida Console", monospace; }
+
+/* Active Window */
+.window.active .titlebar .titlebar-icon {
+  background-color: #000040;
+  color: white; }
+.window.active .titlebar .titlebar-title {
+  background-color: #000040;
+  background-image: linear-gradient(to right, #000040, #004490);
+  color: white; }
+.window.active .titlebar .titlebar-wincontrols, .window.active .titlebar .titlebar-wincontrols .buttons-wrapper {
+  background-color: #004490;
+  font-size: 8px;
+  font-weight: bold; }
+
+/* Inactive Window */
+.window.inactive .titlebar .titlebar-icon {
+  background-color: #404040;
+  color: silver; }
+.window.inactive .titlebar .titlebar-title {
+  background-color: #404040;
+  background-image: linear-gradient(to right, #404040, #606060);
+  color: silver; }
+.window.inactive .titlebar .titlebar-wincontrols, .window.inactive .titlebar .titlebar-wincontrols .buttons-wrapper {
+  background-color: #606060;
+  font-size: 8px;
+  font-weight: bold; }
+
+/*# sourceMappingURL=pltg-windows-hybrid-dark.css.map */

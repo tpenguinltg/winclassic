@@ -1,0 +1,75 @@
+/********** Colors **********/
+.desktop {
+  background-color: yellow;
+  font-family: Tahoma,"Microsoft Sans Serif","MS Sans Serif",sans-serif; }
+
+.window {
+  background-color: red;
+  color: black;
+  border-color: black;
+  font-size: 10px;
+  box-shadow: -0.5px -0.5px 0px 0.5px #ff8080, 0px 0px 0px 1px #aa0000, -0.5px -0.5px 0px 1.5px red, 0px 0px 0px 2px black; }
+
+.menubar {
+  background-color: red;
+  font-size: 10px; }
+
+.disabled {
+  color: #aa0000; }
+
+.selected {
+  background-color: red;
+  color: white; }
+
+.titlebar .titlebar-title {
+  font-size: 10px;
+  height: 18px;
+  line-height: 18px;
+  font-weight: bold; }
+
+.button {
+  background-color: red;
+  color: black;
+  box-shadow: -0.5px -0.5px 0px 0.5px red, 0px 0px 0px 1px #aa0000, -0.5px -0.5px 0px 1.5px #ff8080, 0px 0px 0px 2px black; }
+  .button:active {
+    box-shadow: -0.5px -0.5px 0px 0.5px #aa0000, 0px 0px 0px 1px red, -0.5px -0.5px 0px 1.5px black, 0px 0px 0px 2px #ff8080; }
+
+.text-pane {
+  margin: 2px 0;
+  padding: 2px;
+  background-color: yellow;
+  color: black;
+  box-shadow: -0.5px -0.5px 0px 0.5px black, 0px 0px 0px 1px red, -0.5px -0.5px 0px 1.5px #aa0000, 0px 0px 0px 2px #ff8080; }
+  .text-pane p {
+    margin: 0; }
+
+.monospace {
+  font-family: "Lucida Console", monospace; }
+
+/* Active Window */
+.window.active .titlebar .titlebar-icon {
+  background-color: yellow;
+  color: black; }
+.window.active .titlebar .titlebar-title {
+  background-color: yellow;
+  background-image: linear-gradient(to right, yellow, yellow);
+  color: black; }
+.window.active .titlebar .titlebar-wincontrols, .window.active .titlebar .titlebar-wincontrols .buttons-wrapper {
+  background-color: yellow;
+  font-size: 8px;
+  font-weight: bold; }
+
+/* Inactive Window */
+.window.inactive .titlebar .titlebar-icon {
+  background-color: yellow;
+  color: black; }
+.window.inactive .titlebar .titlebar-title {
+  background-color: yellow;
+  background-image: linear-gradient(to right, yellow, yellow);
+  color: black; }
+.window.inactive .titlebar .titlebar-wincontrols, .window.inactive .titlebar .titlebar-wincontrols .buttons-wrapper {
+  background-color: yellow;
+  font-size: 8px;
+  font-weight: bold; }
+
+/*# sourceMappingURL=hot-dog-stand.css.map */

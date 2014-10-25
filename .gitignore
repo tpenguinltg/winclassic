@@ -2,3 +2,4 @@ session.vim
 *.swp
 *~
 .directory
+.sass-cache
