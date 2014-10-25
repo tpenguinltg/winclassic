@@ -1,4 +1,4 @@
 session.vim
 *.swp
 *~
-.sass-cache
+.directory

@@ -73,6 +73,10 @@
   &:active {
     @include button-inset;
   }
+
+  svg {
+    fill: $ButtonText;
+  }
 }
 
 .text-pane {
@@ -109,7 +113,7 @@
 
     .titlebar-wincontrols, .titlebar-wincontrols .buttons-wrapper {
       background-color: $GradientActiveTitle;
-      font-size: 10px;
+      font-size: 8px;
       font-weight: bold;
     }
   }//end .titlebar
@@ -134,7 +138,7 @@
 
     .titlebar-wincontrols, .titlebar-wincontrols .buttons-wrapper {
       background-color: $GradientInactiveTitle;
-      font-size: 10px;
+      font-size: 8px;
       font-weight: bold;
     }
       

@@ -59,7 +59,7 @@
   color: white; }
 .window.active .titlebar .titlebar-wincontrols, .window.active .titlebar .titlebar-wincontrols .buttons-wrapper {
   background-color: #1084d0;
-  font-size: 10px;
+  font-size: 8px;
   font-weight: bold; }
 
 /* Inactive Window */
@@ -72,7 +72,7 @@
   color: silver; }
 .window.inactive .titlebar .titlebar-wincontrols, .window.inactive .titlebar .titlebar-wincontrols .buttons-wrapper {
   background-color: #b5b5b5;
-  font-size: 10px;
+  font-size: 8px;
   font-weight: bold; }
 
 /*# sourceMappingURL=windows-classic.css.map */
