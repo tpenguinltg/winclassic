@@ -37,6 +37,16 @@
   .button:active {
     box-shadow: -0.5px -0.5px 0px 0.5px gray, 0px 0px 0px 1px silver, -0.5px -0.5px 0px 1.5px black, 0px 0px 0px 2px white; }
 
+.text-pane {
+  padding: 2px;
+  background-color: white;
+  color: black; }
+  .text-pane p {
+    margin: 0; }
+
+.monospace {
+  font-family: "Lucida Console", monospace; }
+
 /* Active Window */
 .window.active .titlebar .titlebar-icon {
   background-color: navy;

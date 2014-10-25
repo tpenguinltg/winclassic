@@ -1,3 +1,35 @@
+@mixin window-inset {
+    box-shadow:
+    -0.5px -0.5px 0px 0.5px $ButtonDkShadow,
+    0px 0px 0px 1px $ButtonLight,
+    -0.5px -0.5px 0px 1.5px $ButtonShadow,
+    0px 0px 0px 2px $ButtonHilight;
+}
+
+@mixin window-outset {
+  box-shadow:
+    -0.5px -0.5px 0px 0.5px $ButtonHilight,
+    0px 0px 0px 1px $ButtonShadow,
+    -0.5px -0.5px 0px 1.5px $ButtonLight,
+    0px 0px 0px 2px $ButtonDkShadow;
+}
+
+@mixin button-inset {
+    box-shadow:
+    -0.5px -0.5px 0px 0.5px $ButtonShadow,
+    0px 0px 0px 1px $ButtonLight,
+    -0.5px -0.5px 0px 1.5px $ButtonDkShadow,
+    0px 0px 0px 2px $ButtonHilight;
+}
+
+@mixin button-outset {
+  box-shadow:
+    -0.5px -0.5px 0px 0.5px $ButtonLight,
+    0px 0px 0px 1px $ButtonShadow,
+    -0.5px -0.5px 0px 1.5px $ButtonHilight,
+    0px 0px 0px 2px $ButtonDkShadow;
+}
+
 /********** Colors **********/
 .desktop {
   background-color: $Background;
@@ -8,12 +40,8 @@
   background-color: $ButtonFace;
   color: $WindowText;
   border-color: $ActiveBorder;
-  box-shadow:
-    -0.5px -0.5px 0px 0.5px $ButtonHilight,
-    0px 0px 0px 1px $ButtonShadow,
-    -0.5px -0.5px 0px 1.5px $ButtonLight,
-    0px 0px 0px 2px $ButtonDkShadow;
   font-size: 8px;
+  @include window-outset;
 }
 
 .menubar {
@@ -40,19 +68,28 @@
 .button {
   background-color: $ButtonFace;
   color: $ButtonText;
-  box-shadow:
-    -0.5px -0.5px 0px 0.5px $ButtonLight,
-    0px 0px 0px 1px $ButtonShadow,
-    -0.5px -0.5px 0px 1.5px $ButtonHilight,
-    0px 0px 0px 2px $ButtonDkShadow;
+  @include button-outset;
 
   &:active {
-    box-shadow:
-    -0.5px -0.5px 0px 0.5px $ButtonShadow,
-    0px 0px 0px 1px $ButtonLight,
-    -0.5px -0.5px 0px 1.5px $ButtonDkShadow,
-    0px 0px 0px 2px $ButtonHilight;
+    @include button-inset;
   }
+}
+
+.text-pane {
+  margin: 2px 0;
+  padding: 2px;
+  background-color: $Window;
+  color: $WindowText;
+
+  @include window-inset;
+
+  p {
+    margin: 0;
+  }
+}
+
+.monospace {
+  font-family: "Lucida Console", monospace;
 }
 
 /* Active Window */

@@ -10,12 +10,13 @@
   background-color: #d4d0c8;
   color: black;
   border-color: #d4d0c8;
-  box-shadow: -0.5px -0.5px 0px 0.5px white, 0px 0px 0px 1px gray, -0.5px -0.5px 0px 1.5px #d4d0c8, 0px 0px 0px 2px #404040;
-  font-size: 8px; }
+  font-size: 8px;
+  box-shadow: -0.5px -0.5px 0px 0.5px white, 0px 0px 0px 1px gray, -0.5px -0.5px 0px 1.5px #d4d0c8, 0px 0px 0px 2px #404040; }
 
 .menubar {
   background-color: #d4d0c8;
-  font-size: 8px; }
+  font-size: 8px;
+  margin-bottom: 1px; }
 
 .disabled {
   color: gray; }
@@ -36,6 +37,18 @@
   box-shadow: -0.5px -0.5px 0px 0.5px #d4d0c8, 0px 0px 0px 1px gray, -0.5px -0.5px 0px 1.5px white, 0px 0px 0px 2px #404040; }
   .button:active {
     box-shadow: -0.5px -0.5px 0px 0.5px gray, 0px 0px 0px 1px #d4d0c8, -0.5px -0.5px 0px 1.5px #404040, 0px 0px 0px 2px white; }
+
+.text-pane {
+  margin: 2px 0;
+  padding: 2px;
+  background-color: white;
+  color: black;
+  box-shadow: -0.5px -0.5px 0px 0.5px #404040, 0px 0px 0px 1px #d4d0c8, -0.5px -0.5px 0px 1.5px gray, 0px 0px 0px 2px white; }
+  .text-pane p {
+    margin: 0; }
+
+.monospace {
+  font-family: "Lucida Console", monospace; }
 
 /* Active Window */
 .window.active .titlebar .titlebar-icon {

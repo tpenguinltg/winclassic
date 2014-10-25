@@ -19,7 +19,9 @@
 
 #window-active {
   width: 387px;
-  height:;
+  height: 155px;
+  top: 33px;
+  left: 14px;
 }
 
 #window-dialog {
@@ -31,4 +33,8 @@
 
 .titlebar-wincontrols .button svg {
   fill: #000000;
+}
+
+#active-textarea {
+  flex-grow: 1;
 }

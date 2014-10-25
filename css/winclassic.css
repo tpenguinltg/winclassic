@@ -9,7 +9,11 @@
   cursor: default;
 }
 
-.modal .window-content {
+.window:not(.modal) {
+  padding: 1px;
+}
+
+.window-content {
   display: flex;
   flex-direction: column;
 }
@@ -24,11 +28,9 @@
   bottom: 0px;
   margin: 6px auto;
   */
-}
-
-.window.modal .window-content .modal-controls .buttons-wrapper {
   text-align: center;
   padding: 0px;
+  margin: 2px 0;
 }
 
 .window-content .button {
@@ -38,6 +40,12 @@
   text-align: center;
   vertical-align: middle;
   line-height: 20px;
+}
+
+.window-area {
+  margin: 1px 3px;
+  display: flex;
+  flex-grow: 1;
 }
 
 .menubar {
@@ -50,7 +58,7 @@
 .menubar li {
   /* float: left; */
   display: inline-block;
-  padding: 2px 5px;
+  padding: 1px 4px;
 }
 
 .titlebar {
