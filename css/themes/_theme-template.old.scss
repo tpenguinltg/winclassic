@@ -1,0 +1,228 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+
+/********** Colors **********/
+.desktop {
+  background-color: $Background;
+  font-family: Tahoma,"Microsoft Sans Serif","MS Sans Serif",sans-serif;
+}
+
+
+.window {
+  background-color: $ButtonFace;
+  color: $WindowText;
+  border-color: $ActiveBorder;
+  box-shadow:
+    -0.5px -0.5px 0px 0.5px $ButtonHilight,
+    0px 0px 0px 1px $ButtonShadow,
+    -0.5px -0.5px 0px 1.5px $ButtonLight,
+    0px 0px 0px 2px $ButtonDkShadow;
+  font-size: 8px;
+}
+
+.menubar {
+  background-color: $Menu;
+  font-size: 8px;
+}
+
+.disabled {
+  color: $GrayText;
+}
+
+.selected {
+  background-color: $Hilight;
+  color: $HilightText;
+}
+
+.window.active .titlebar .titlebar-icon {
+  background-color: $ActiveTitle;
+  color: $TitleText;
+}
+
+.window.inactive .titlebar .titlebar-icon {
+  background-color: $InactiveTitle;
+  color: $InactiveTitleText;
+}
+
+.titlebar .titlebar-title {
+  font-size: 8px;
+  height: 18px;
+  line-height: 18px;
+  font-weight: bold;
+}
+
+.window.active .titlebar .titlebar-title {
+  background-color: $ActiveTitle;
+  background-image: linear-gradient(to right, $ActiveTitle, $GradientActiveTitle);
+  color: $TitleText;
+}
+
+.window.inactive .titlebar .titlebar-title {
+  background-color: $InactiveTitle;
+  background-image: linear-gradient(to right, $InactiveTitle, $GradientInactiveTitle);
+  color: $InactiveTitleText;
+}
+
+.window.active .titlebar .titlebar-wincontrols, .titlebar-wincontrols .buttons-wrapper {
+  background-color: $GradientActiveTitle;
+  font-size: 8px;
+  font-weight: bold;
+}
+
+.window.inactive .titlebar .titlebar-wincontrols, .titlebar-wincontrols .buttons-wrapper {
+  background-color: $GradientInactiveTitle;
+  font-size: 8px;
+  font-weight: bold;
+}
+
+.button {
+  background-color: $ButtonFace;
+  color: $ButtonText;
+  box-shadow:
+    -0.5px -0.5px 0px 0.5px $ButtonLight,
+    0px 0px 0px 1px $ButtonShadow,
+    -0.5px -0.5px 0px 1.5px $ButtonHilight,
+    0px 0px 0px 2px $ButtonDkShadow;
+}
+
+.button:active {
+  box-shadow:
+    -0.5px -0.5px 0px 0.5px $ButtonShadow,
+    0px 0px 0px 1px $ButtonLight,
+    -0.5px -0.5px 0px 1.5px $ButtonDkShadow,
+    0px 0px 0px 2px $ButtonHilight;
+}
+
+
+/********** Metrics **********/
+.window {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  cursor: default;
+}
+
+.modal .window-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.window-content, .modal-content {
+  flex-grow: 1;
+}
+
+.window.modal .window-content .modal-controls .buttons-wrapper {
+  /*
+  position: absolute;
+  bottom: 0px;
+  margin: 6px auto;
+  */
+}
+
+.window.modal .window-content .modal-controls .buttons-wrapper {
+  text-align: center;
+  padding: 0px;
+}
+
+.window-content .button {
+  display: inline-block;
+  min-width: 68px;
+  min-height: 20px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 20px;
+}
+
+.menubar {
+  width: 100%;
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.menubar li {
+  /* float: left; */
+  display: inline-block;
+  padding: 2px 5px;
+}
+
+.titlebar {
+  margin: 0px;
+  padding: 1px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+}
+
+.titlebar .titlebar-icon {
+  width: 16px;
+  height: 16px;
+  padding: 1px;
+}
+
+.titlebar .titlebar-title {
+  display: block;
+  padding: 0px 1px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  vertical-align: middle;
+  flex-grow: 1;
+}
+
+.titlebar .titlebar-wincontrols {
+  display: inline-block;
+  margin: 0px;
+  padding: 1px;
+  min-width: fit-content;
+}
+
+.titlebar-wincontrols .buttons-wrapper {
+  display: inline-block;
+  width: auto;
+  margin: 0px;
+  padding: 1px;
+}
+
+.titlebar-wincontrols .spacer {
+  display: inline-block;
+  margin: 0px;
+  padding: 0px;
+  width: 2px;
+}
+
+.titlebar-wincontrols .button {
+  display: inline-block;
+  min-width: 12px;
+  min-height: 10px;
+  width: 12px;
+  height: 10px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 10px;
+}
+
+.window.modal .window-content {
+  padding: 2px;
+}
+
+.button {
+  margin: 2px;
+}
+
+.button span.button-content {
+  display: inline-block;
+}
+
+.button:active .button-content{
+  /*
+  padding-top: 1px;
+  padding-left: 1px;
+  margin-bottom: 1px;
+  margin-right: 1px;
+  */
+  transform: translate(1px, 1px);
+}
+

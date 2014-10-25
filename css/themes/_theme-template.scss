@@ -1,0 +1,105 @@
+/********** Colors **********/
+.desktop {
+  background-color: $Background;
+  font-family: Tahoma,"Microsoft Sans Serif","MS Sans Serif",sans-serif;
+}
+
+.window {
+  background-color: $ButtonFace;
+  color: $WindowText;
+  border-color: $ActiveBorder;
+  box-shadow:
+    -0.5px -0.5px 0px 0.5px $ButtonHilight,
+    0px 0px 0px 1px $ButtonShadow,
+    -0.5px -0.5px 0px 1.5px $ButtonLight,
+    0px 0px 0px 2px $ButtonDkShadow;
+  font-size: 8px;
+}
+
+.menubar {
+  background-color: $Menu;
+  font-size: 8px;
+}
+
+.disabled {
+  color: $GrayText;
+}
+
+.selected {
+  background-color: $Hilight;
+  color: $HilightText;
+}
+
+.titlebar .titlebar-title {
+  font-size: 8px;
+  height: 18px;
+  line-height: 18px;
+  font-weight: bold;
+}
+
+.button {
+  background-color: $ButtonFace;
+  color: $ButtonText;
+  box-shadow:
+    -0.5px -0.5px 0px 0.5px $ButtonLight,
+    0px 0px 0px 1px $ButtonShadow,
+    -0.5px -0.5px 0px 1.5px $ButtonHilight,
+    0px 0px 0px 2px $ButtonDkShadow;
+
+  &:active {
+    box-shadow:
+    -0.5px -0.5px 0px 0.5px $ButtonShadow,
+    0px 0px 0px 1px $ButtonLight,
+    -0.5px -0.5px 0px 1.5px $ButtonDkShadow,
+    0px 0px 0px 2px $ButtonHilight;
+  }
+}
+
+/* Active Window */
+.window.active {
+
+  .titlebar {
+    .titlebar-icon {
+      background-color: $ActiveTitle;
+      color: $TitleText;
+    }
+
+    .titlebar-title {
+      background-color: $ActiveTitle;
+      background-image: linear-gradient(to right, $ActiveTitle, $GradientActiveTitle);
+      color: $TitleText;
+    }
+
+    .titlebar-wincontrols, .titlebar-wincontrols .buttons-wrapper {
+      background-color: $GradientActiveTitle;
+      font-size: 8px;
+      font-weight: bold;
+    }
+  }//end .titlebar
+}
+
+/* Inactive Window */
+.window.inactive {
+
+  .titlebar {
+
+    .titlebar-icon {
+      background-color: $InactiveTitle;
+      color: $InactiveTitleText;
+    }
+  
+    .titlebar-title {
+      background-color: $InactiveTitle;
+      background-image: linear-gradient(to right, $InactiveTitle, $GradientInactiveTitle);
+      color: $InactiveTitleText;
+    }
+
+
+    .titlebar-wincontrols, .titlebar-wincontrols .buttons-wrapper {
+      background-color: $GradientInactiveTitle;
+      font-size: 8px;
+      font-weight: bold;
+    }
+      
+  }//end .titlebar
+}//end .window.inactive
