@@ -99,6 +99,8 @@
 /* Active Window */
 .window.active {
 
+  border: 1px solid $ActiveBorder;
+
   .titlebar {
     .titlebar-icon {
       background-color: $ActiveTitle;
@@ -121,6 +123,8 @@
 
 /* Inactive Window */
 .window.inactive {
+
+  border: 1px solid $InactiveBorder;
 
   .titlebar {
 

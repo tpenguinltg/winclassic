@@ -33,6 +33,8 @@
   box-shadow: -0.5px -0.5px 0px 0.5px red, 0px 0px 0px 1px #aa0000, -0.5px -0.5px 0px 1.5px #ff8080, 0px 0px 0px 2px black; }
   .button:active {
     box-shadow: -0.5px -0.5px 0px 0.5px #aa0000, 0px 0px 0px 1px red, -0.5px -0.5px 0px 1.5px black, 0px 0px 0px 2px #ff8080; }
+  .button svg {
+    fill: black; }
 
 .text-pane {
   margin: 2px 0;
@@ -47,6 +49,8 @@
   font-family: "Lucida Console", monospace; }
 
 /* Active Window */
+.window.active:not(.modal) {
+  border: 1px solid black; }
 .window.active .titlebar .titlebar-icon {
   background-color: yellow;
   color: black; }
@@ -60,6 +64,8 @@
   font-weight: bold; }
 
 /* Inactive Window */
+.window.inactive:not(.modal) {
+  border: 1px solid red; }
 .window.inactive .titlebar .titlebar-icon {
   background-color: yellow;
   color: black; }

@@ -1,0 +1,84 @@
+/* Name:   Dropbox
+ * Author: tPenguinLTG
+ */
+/********** Colors **********/
+.desktop {
+  background-color: #007ee5;
+  font-family: Tahoma,"Microsoft Sans Serif","MS Sans Serif",sans-serif; }
+
+.window {
+  background-color: #cce5fb;
+  color: #47525d;
+  border-color: #7b8994;
+  font-size: 10px;
+  box-shadow: -0.5px -0.5px 0px 0.5px #e6f2fd, 0px 0px 0px 1px #3e9bf0, -0.5px -0.5px 0px 1.5px #cce5fb, 0px 0px 0px 2px #404040; }
+
+.menubar {
+  background-color: #cce5fb;
+  font-size: 10px; }
+
+.disabled {
+  color: #7b9394; }
+
+.selected {
+  background-color: #80bff2;
+  color: white; }
+
+.titlebar .titlebar-title {
+  font-size: 10px;
+  height: 18px;
+  line-height: 18px;
+  font-weight: bold; }
+
+.button {
+  background-color: #cce5fb;
+  color: #47525d;
+  box-shadow: -0.5px -0.5px 0px 0.5px #cce5fb, 0px 0px 0px 1px #3e9bf0, -0.5px -0.5px 0px 1.5px #e6f2fd, 0px 0px 0px 2px #404040; }
+  .button:active {
+    box-shadow: -0.5px -0.5px 0px 0.5px #3e9bf0, 0px 0px 0px 1px #cce5fb, -0.5px -0.5px 0px 1.5px #404040, 0px 0px 0px 2px #e6f2fd; }
+  .button svg {
+    fill: #47525d; }
+
+.text-pane {
+  margin: 2px 0;
+  padding: 2px;
+  background-color: white;
+  color: #47525d;
+  box-shadow: -0.5px -0.5px 0px 0.5px #404040, 0px 0px 0px 1px #cce5fb, -0.5px -0.5px 0px 1.5px #3e9bf0, 0px 0px 0px 2px #e6f2fd; }
+  .text-pane p {
+    margin: 0; }
+
+.monospace {
+  font-family: "Lucida Console", monospace; }
+
+/* Active Window */
+.window.active:not(.modal) {
+  border: 1px solid #7b8994; }
+.window.active .titlebar .titlebar-icon {
+  background-color: #007ee5;
+  color: white; }
+.window.active .titlebar .titlebar-title {
+  background-color: #007ee5;
+  background-image: linear-gradient(to right, #007ee5, #007ee5);
+  color: white; }
+.window.active .titlebar .titlebar-wincontrols, .window.active .titlebar .titlebar-wincontrols .buttons-wrapper {
+  background-color: #007ee5;
+  font-size: 8px;
+  font-weight: bold; }
+
+/* Inactive Window */
+.window.inactive:not(.modal) {
+  border: 1px solid #cce5fb; }
+.window.inactive .titlebar .titlebar-icon {
+  background-color: #80bff2;
+  color: white; }
+.window.inactive .titlebar .titlebar-title {
+  background-color: #80bff2;
+  background-image: linear-gradient(to right, #80bff2, #80bff2);
+  color: white; }
+.window.inactive .titlebar .titlebar-wincontrols, .window.inactive .titlebar .titlebar-wincontrols .buttons-wrapper {
+  background-color: #80bff2;
+  font-size: 8px;
+  font-weight: bold; }
+
+/*# sourceMappingURL=dropbox.css.map */

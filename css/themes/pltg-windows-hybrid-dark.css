@@ -49,6 +49,8 @@
   font-family: "Lucida Console", monospace; }
 
 /* Active Window */
+.window.active:not(.modal) {
+  border: 1px solid #404040; }
 .window.active .titlebar .titlebar-icon {
   background-color: #000040;
   color: white; }
@@ -62,6 +64,8 @@
   font-weight: bold; }
 
 /* Inactive Window */
+.window.inactive:not(.modal) {
+  border: 1px solid #404040; }
 .window.inactive .titlebar .titlebar-icon {
   background-color: #404040;
   color: silver; }

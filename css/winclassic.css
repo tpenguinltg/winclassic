@@ -9,8 +9,8 @@
   cursor: default;
 }
 
-.window:not(.modal) {
-  padding: 1px;
+.window.modal {
+  border-width: 0;
 }
 
 .window-content {
