@@ -1,5 +1,2 @@
-session.vim
-*.swp
-*~
-.directory
 .sass-cache
+*.css.map
