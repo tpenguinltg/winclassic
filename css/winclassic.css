@@ -2,6 +2,10 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
+.desktop {
+  overflow: hidden;
+}
+
 .window {
   position: absolute;
   display: flex;
@@ -43,7 +47,7 @@
 }
 
 .window-area {
-  margin: 1px 3px;
+  margin: 2px 3px 1px;
   display: flex;
   flex-grow: 1;
 }
@@ -119,7 +123,7 @@
 }
 
 .window.modal .window-content {
-  padding: 2px 3px;
+  padding: 3px 3px 2px;
 }
 
 .button {

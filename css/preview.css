@@ -13,24 +13,24 @@
 }
 
 #window-inactive {
-  width: 369px;
-  height: 172px;
-  top: 12px;
-  left: 12px;
+  width: 371px;
+  height: 175px;
+  top: 10px;
+  left: 10px;
 }
 
 #window-active {
-  width: 387px;
-  height: 155px;
-  top: 35px;
-  left: 16px;
+  width: 389px;
+  height: 157px;
+  top: 33px;
+  left: 14px;
 }
 
 #window-dialog {
-  width: 237px;
-  height: 78px;
-  left: 23px;
-  top: 134px;
+  width: 239px;
+  height: 80px;
+  left: 22px;
+  top: 133px;
 }
 
 .titlebar-wincontrols .button svg {

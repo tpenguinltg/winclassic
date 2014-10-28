@@ -1,0 +1,84 @@
+/* Name: Wine Human Theme
+ * URL:  <https://wiki.ubuntu.com/WineHumanTheme>
+ */
+/********** Colors **********/
+.desktop {
+  background-color: black;
+  font-family: Tahoma,"Microsoft Sans Serif","MS Sans Serif",sans-serif; }
+
+.window {
+  background-color: #efebe7;
+  color: black;
+  border-color: #efebe7;
+  font-size: 10px;
+  box-shadow: -0.5px -0.5px 0px 0.5px #fdfaf8, 0px 0px 0px 1px #b3afab, -0.5px -0.5px 0px 1.5px #efebe7, 0px 0px 0px 2px #736a60; }
+
+.menubar {
+  background-color: #efebe7;
+  font-size: 10px; }
+
+.disabled {
+  color: #b3afab; }
+
+.selected {
+  background-color: #f8ce8c;
+  color: black; }
+
+.titlebar .titlebar-title {
+  font-size: 10px;
+  height: 18px;
+  line-height: 18px;
+  font-weight: bold; }
+
+.button {
+  background-color: #efebe7;
+  color: black;
+  box-shadow: -0.5px -0.5px 0px 0.5px #efebe7, 0px 0px 0px 1px #b3afab, -0.5px -0.5px 0px 1.5px #fdfaf8, 0px 0px 0px 2px #736a60; }
+  .button:active {
+    box-shadow: -0.5px -0.5px 0px 0.5px #b3afab, 0px 0px 0px 1px #efebe7, -0.5px -0.5px 0px 1.5px #736a60, 0px 0px 0px 2px #fdfaf8; }
+  .button svg {
+    fill: black; }
+
+.text-pane {
+  margin: 2px 0;
+  padding: 2px;
+  background-color: white;
+  color: black;
+  box-shadow: -0.5px -0.5px 0px 0.5px #736a60, 0px 0px 0px 1px #efebe7, -0.5px -0.5px 0px 1.5px #b3afab, 0px 0px 0px 2px #fdfaf8; }
+  .text-pane p {
+    margin: 0; }
+
+.monospace {
+  font-family: "Lucida Console", monospace; }
+
+/* Active Window */
+.window.active {
+  border: 1px solid #efebe7; }
+  .window.active .titlebar .titlebar-icon {
+    background-color: #d28d46;
+    color: white; }
+  .window.active .titlebar .titlebar-title {
+    background-color: #d28d46;
+    background-image: linear-gradient(to right, #d28d46, #d28d46);
+    color: white; }
+  .window.active .titlebar .titlebar-wincontrols, .window.active .titlebar .titlebar-wincontrols .buttons-wrapper {
+    background-color: #d28d46;
+    font-size: 8px;
+    font-weight: bold; }
+
+/* Inactive Window */
+.window.inactive {
+  border: 1px solid #efebe7; }
+  .window.inactive .titlebar .titlebar-icon {
+    background-color: #efebe7;
+    color: #3c3c3b; }
+  .window.inactive .titlebar .titlebar-title {
+    background-color: #efebe7;
+    background-image: linear-gradient(to right, #efebe7, #efebe7);
+    color: #3c3c3b; }
+  .window.inactive .titlebar .titlebar-wincontrols, .window.inactive .titlebar .titlebar-wincontrols .buttons-wrapper {
+    background-color: #efebe7;
+    font-size: 8px;
+    font-weight: bold; }
+
+/*# sourceMappingURL=ubuntu-human.css.map */
