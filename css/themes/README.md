@@ -102,8 +102,11 @@ The text before the `=` is the variable name and the numbers after are
 RGB decimal values for that colour.
 
 The easiest way to convert it to SASS is with a regex search-and-replace.
+
 In Vim, this is a simple substitute command:
+
     :s/\(\a*\)\s*=\s*\(\d\{1,3})\s+\(\d\{1,3})\s+\(\d\{1,3})/$\1: rgb(\2,\3,\4);
 
 Most importantly, add the following line to the end to import the skeleton:
+
     @import "theme-template";
