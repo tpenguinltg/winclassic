@@ -49,33 +49,33 @@
   font-family: "Lucida Console", monospace; }
 
 /* Active Window */
-.window.active:not(.modal) {
+.window.active {
   border: 1px solid black; }
-.window.active .titlebar .titlebar-icon {
-  background-color: yellow;
-  color: black; }
-.window.active .titlebar .titlebar-title {
-  background-color: yellow;
-  background-image: linear-gradient(to right, yellow, yellow);
-  color: black; }
-.window.active .titlebar .titlebar-wincontrols, .window.active .titlebar .titlebar-wincontrols .buttons-wrapper {
-  background-color: yellow;
-  font-size: 8px;
-  font-weight: bold; }
+  .window.active .titlebar .titlebar-icon {
+    background-color: yellow;
+    color: black; }
+  .window.active .titlebar .titlebar-title {
+    background-color: yellow;
+    background-image: linear-gradient(to right, yellow, yellow);
+    color: black; }
+  .window.active .titlebar .titlebar-wincontrols, .window.active .titlebar .titlebar-wincontrols .buttons-wrapper {
+    background-color: yellow;
+    font-size: 8px;
+    font-weight: bold; }
 
 /* Inactive Window */
-.window.inactive:not(.modal) {
+.window.inactive {
   border: 1px solid red; }
-.window.inactive .titlebar .titlebar-icon {
-  background-color: yellow;
-  color: black; }
-.window.inactive .titlebar .titlebar-title {
-  background-color: yellow;
-  background-image: linear-gradient(to right, yellow, yellow);
-  color: black; }
-.window.inactive .titlebar .titlebar-wincontrols, .window.inactive .titlebar .titlebar-wincontrols .buttons-wrapper {
-  background-color: yellow;
-  font-size: 8px;
-  font-weight: bold; }
+  .window.inactive .titlebar .titlebar-icon {
+    background-color: yellow;
+    color: black; }
+  .window.inactive .titlebar .titlebar-title {
+    background-color: yellow;
+    background-image: linear-gradient(to right, yellow, yellow);
+    color: black; }
+  .window.inactive .titlebar .titlebar-wincontrols, .window.inactive .titlebar .titlebar-wincontrols .buttons-wrapper {
+    background-color: yellow;
+    font-size: 8px;
+    font-weight: bold; }
 
 /*# sourceMappingURL=hot-dog-stand.css.map */

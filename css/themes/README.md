@@ -57,8 +57,8 @@ A standard theme file looks like this:
 
 
 It is best to stick with RGB decimal notation as doing so makes it easier
-to convert the SASS file to a Microsoft `.theme` file and vice versa, but
-any valid CSS colour syntax is valid.
+to convert the SASS file to a Microsoft `.theme` file and vice versa,
+but any valid CSS colour syntax is acceptable.
 
 
 ## Converting Microsoft `.theme` files to Theme Designer files

@@ -1,5 +1,5 @@
-/* Windows 98
- * Microsoft
+/* Name: Seawater Soft
+ * Author: tPenguinLTG
  */
 /********** Colors **********/
 .desktop {
@@ -7,21 +7,21 @@
   font-family: Tahoma,"Microsoft Sans Serif","MS Sans Serif",sans-serif; }
 
 .window {
-  background-color: silver;
+  background-color: #4f85c1;
   color: black;
-  border-color: silver;
+  border-color: #4f85c1;
   font-size: 10px;
-  box-shadow: -0.5px -0.5px 0px 0.5px white, 0px 0px 0px 1px gray, -0.5px -0.5px 0px 1.5px silver, 0px 0px 0px 2px black; }
+  box-shadow: -0.5px -0.5px 0px 0.5px #a7c2e0, 0px 0px 0px 1px #a7c2e0, -0.5px -0.5px 0px 1.5px #a7c2e0, 0px 0px 0px 2px #a7c2e0; }
 
 .menubar {
-  background-color: silver;
+  background-color: #4f85c1;
   font-size: 10px; }
 
 .disabled {
-  color: gray; }
+  color: #2f5886; }
 
 .selected {
-  background-color: navy;
+  background-color: teal;
   color: white; }
 
 .titlebar .titlebar-title {
@@ -31,20 +31,20 @@
   font-weight: bold; }
 
 .button {
-  background-color: silver;
+  background-color: #4f85c1;
   color: black;
-  box-shadow: -0.5px -0.5px 0px 0.5px silver, 0px 0px 0px 1px gray, -0.5px -0.5px 0px 1.5px white, 0px 0px 0px 2px black; }
+  box-shadow: -0.5px -0.5px 0px 0.5px #a7c2e0, 0px 0px 0px 1px #a7c2e0, -0.5px -0.5px 0px 1.5px #a7c2e0, 0px 0px 0px 2px #a7c2e0; }
   .button:active {
-    box-shadow: -0.5px -0.5px 0px 0.5px gray, 0px 0px 0px 1px silver, -0.5px -0.5px 0px 1.5px black, 0px 0px 0px 2px white; }
+    box-shadow: -0.5px -0.5px 0px 0.5px #a7c2e0, 0px 0px 0px 1px #a7c2e0, -0.5px -0.5px 0px 1.5px #a7c2e0, 0px 0px 0px 2px #a7c2e0; }
   .button svg {
     fill: black; }
 
 .text-pane {
   margin: 2px 0;
   padding: 2px;
-  background-color: white;
+  background-color: #b4cbe4;
   color: black;
-  box-shadow: -0.5px -0.5px 0px 0.5px black, 0px 0px 0px 1px silver, -0.5px -0.5px 0px 1.5px gray, 0px 0px 0px 2px white; }
+  box-shadow: -0.5px -0.5px 0px 0.5px #a7c2e0, 0px 0px 0px 1px #a7c2e0, -0.5px -0.5px 0px 1.5px #a7c2e0, 0px 0px 0px 2px #a7c2e0; }
   .text-pane p {
     margin: 0; }
 
@@ -53,32 +53,32 @@
 
 /* Active Window */
 .window.active {
-  border: 1px solid silver; }
+  border: 1px solid #4f85c1; }
   .window.active .titlebar .titlebar-icon {
     background-color: navy;
     color: white; }
   .window.active .titlebar .titlebar-title {
     background-color: navy;
-    background-image: linear-gradient(to right, navy, #1084d0);
+    background-image: linear-gradient(to right, navy, navy);
     color: white; }
   .window.active .titlebar .titlebar-wincontrols, .window.active .titlebar .titlebar-wincontrols .buttons-wrapper {
-    background-color: #1084d0;
+    background-color: navy;
     font-size: 8px;
     font-weight: bold; }
 
 /* Inactive Window */
 .window.inactive {
-  border: 1px solid silver; }
+  border: 1px solid #4f85c1; }
   .window.inactive .titlebar .titlebar-icon {
-    background-color: gray;
+    background-color: #0055aa;
     color: silver; }
   .window.inactive .titlebar .titlebar-title {
-    background-color: gray;
-    background-image: linear-gradient(to right, gray, #b5b5b5);
+    background-color: #0055aa;
+    background-image: linear-gradient(to right, #0055aa, #0055aa);
     color: silver; }
   .window.inactive .titlebar .titlebar-wincontrols, .window.inactive .titlebar .titlebar-wincontrols .buttons-wrapper {
-    background-color: #b5b5b5;
+    background-color: #0055aa;
     font-size: 8px;
     font-weight: bold; }
 
-/*# sourceMappingURL=windows-98.css.map */
+/*# sourceMappingURL=seawater-soft.css.map */

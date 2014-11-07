@@ -49,33 +49,33 @@
   font-family: "Lucida Console", monospace; }
 
 /* Active Window */
-.window.active:not(.modal) {
+.window.active {
   border: 1px solid #404040; }
-.window.active .titlebar .titlebar-icon {
-  background-color: #000040;
-  color: white; }
-.window.active .titlebar .titlebar-title {
-  background-color: #000040;
-  background-image: linear-gradient(to right, #000040, #004490);
-  color: white; }
-.window.active .titlebar .titlebar-wincontrols, .window.active .titlebar .titlebar-wincontrols .buttons-wrapper {
-  background-color: #004490;
-  font-size: 8px;
-  font-weight: bold; }
+  .window.active .titlebar .titlebar-icon {
+    background-color: #000040;
+    color: white; }
+  .window.active .titlebar .titlebar-title {
+    background-color: #000040;
+    background-image: linear-gradient(to right, #000040, #004490);
+    color: white; }
+  .window.active .titlebar .titlebar-wincontrols, .window.active .titlebar .titlebar-wincontrols .buttons-wrapper {
+    background-color: #004490;
+    font-size: 8px;
+    font-weight: bold; }
 
 /* Inactive Window */
-.window.inactive:not(.modal) {
+.window.inactive {
   border: 1px solid #404040; }
-.window.inactive .titlebar .titlebar-icon {
-  background-color: #404040;
-  color: silver; }
-.window.inactive .titlebar .titlebar-title {
-  background-color: #404040;
-  background-image: linear-gradient(to right, #404040, #606060);
-  color: silver; }
-.window.inactive .titlebar .titlebar-wincontrols, .window.inactive .titlebar .titlebar-wincontrols .buttons-wrapper {
-  background-color: #606060;
-  font-size: 8px;
-  font-weight: bold; }
+  .window.inactive .titlebar .titlebar-icon {
+    background-color: #404040;
+    color: silver; }
+  .window.inactive .titlebar .titlebar-title {
+    background-color: #404040;
+    background-image: linear-gradient(to right, #404040, #606060);
+    color: silver; }
+  .window.inactive .titlebar .titlebar-wincontrols, .window.inactive .titlebar .titlebar-wincontrols .buttons-wrapper {
+    background-color: #606060;
+    font-size: 8px;
+    font-weight: bold; }
 
 /*# sourceMappingURL=pltg-windows-hybrid-dark.css.map */

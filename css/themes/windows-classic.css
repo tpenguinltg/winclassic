@@ -52,33 +52,33 @@
   font-family: "Lucida Console", monospace; }
 
 /* Active Window */
-.window.active:not(.modal) {
+.window.active {
   border: 1px solid silver; }
-.window.active .titlebar .titlebar-icon {
-  background-color: navy;
-  color: white; }
-.window.active .titlebar .titlebar-title {
-  background-color: navy;
-  background-image: linear-gradient(to right, navy, #1084d0);
-  color: white; }
-.window.active .titlebar .titlebar-wincontrols, .window.active .titlebar .titlebar-wincontrols .buttons-wrapper {
-  background-color: #1084d0;
-  font-size: 8px;
-  font-weight: bold; }
+  .window.active .titlebar .titlebar-icon {
+    background-color: navy;
+    color: white; }
+  .window.active .titlebar .titlebar-title {
+    background-color: navy;
+    background-image: linear-gradient(to right, navy, #1084d0);
+    color: white; }
+  .window.active .titlebar .titlebar-wincontrols, .window.active .titlebar .titlebar-wincontrols .buttons-wrapper {
+    background-color: #1084d0;
+    font-size: 8px;
+    font-weight: bold; }
 
 /* Inactive Window */
-.window.inactive:not(.modal) {
+.window.inactive {
   border: 1px solid silver; }
-.window.inactive .titlebar .titlebar-icon {
-  background-color: gray;
-  color: silver; }
-.window.inactive .titlebar .titlebar-title {
-  background-color: gray;
-  background-image: linear-gradient(to right, gray, #b5b5b5);
-  color: silver; }
-.window.inactive .titlebar .titlebar-wincontrols, .window.inactive .titlebar .titlebar-wincontrols .buttons-wrapper {
-  background-color: #b5b5b5;
-  font-size: 8px;
-  font-weight: bold; }
+  .window.inactive .titlebar .titlebar-icon {
+    background-color: gray;
+    color: silver; }
+  .window.inactive .titlebar .titlebar-title {
+    background-color: gray;
+    background-image: linear-gradient(to right, gray, #b5b5b5);
+    color: silver; }
+  .window.inactive .titlebar .titlebar-wincontrols, .window.inactive .titlebar .titlebar-wincontrols .buttons-wrapper {
+    background-color: #b5b5b5;
+    font-size: 8px;
+    font-weight: bold; }
 
 /*# sourceMappingURL=windows-classic.css.map */

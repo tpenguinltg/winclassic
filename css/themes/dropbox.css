@@ -52,33 +52,33 @@
   font-family: "Lucida Console", monospace; }
 
 /* Active Window */
-.window.active:not(.modal) {
+.window.active {
   border: 1px solid #7b8994; }
-.window.active .titlebar .titlebar-icon {
-  background-color: #007ee5;
-  color: white; }
-.window.active .titlebar .titlebar-title {
-  background-color: #007ee5;
-  background-image: linear-gradient(to right, #007ee5, #007ee5);
-  color: white; }
-.window.active .titlebar .titlebar-wincontrols, .window.active .titlebar .titlebar-wincontrols .buttons-wrapper {
-  background-color: #007ee5;
-  font-size: 8px;
-  font-weight: bold; }
+  .window.active .titlebar .titlebar-icon {
+    background-color: #007ee5;
+    color: white; }
+  .window.active .titlebar .titlebar-title {
+    background-color: #007ee5;
+    background-image: linear-gradient(to right, #007ee5, #007ee5);
+    color: white; }
+  .window.active .titlebar .titlebar-wincontrols, .window.active .titlebar .titlebar-wincontrols .buttons-wrapper {
+    background-color: #007ee5;
+    font-size: 8px;
+    font-weight: bold; }
 
 /* Inactive Window */
-.window.inactive:not(.modal) {
+.window.inactive {
   border: 1px solid #cce5fb; }
-.window.inactive .titlebar .titlebar-icon {
-  background-color: #80bff2;
-  color: white; }
-.window.inactive .titlebar .titlebar-title {
-  background-color: #80bff2;
-  background-image: linear-gradient(to right, #80bff2, #80bff2);
-  color: white; }
-.window.inactive .titlebar .titlebar-wincontrols, .window.inactive .titlebar .titlebar-wincontrols .buttons-wrapper {
-  background-color: #80bff2;
-  font-size: 8px;
-  font-weight: bold; }
+  .window.inactive .titlebar .titlebar-icon {
+    background-color: #80bff2;
+    color: white; }
+  .window.inactive .titlebar .titlebar-title {
+    background-color: #80bff2;
+    background-image: linear-gradient(to right, #80bff2, #80bff2);
+    color: white; }
+  .window.inactive .titlebar .titlebar-wincontrols, .window.inactive .titlebar .titlebar-wincontrols .buttons-wrapper {
+    background-color: #80bff2;
+    font-size: 8px;
+    font-weight: bold; }
 
 /*# sourceMappingURL=dropbox.css.map */
