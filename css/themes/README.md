@@ -105,7 +105,7 @@ The easiest way to convert it to Sass is with a regex search-and-replace.
 
 In Vim, this is a simple substitute command:
 
-    :s/\(\a*\)\s*=\s*\(\d\{1,3})\s+\(\d\{1,3})\s+\(\d\{1,3})/$\1: rgb(\2,\3,\4);
+    :s/\s*\(\a*\)\s*=\s*\(\d\{1,3})\s+\(\d\{1,3})\s+\(\d\{1,3})/$\1: rgb(\2,\3,\4);
 
 Most importantly, add the following line to the end to import the skeleton:
 
