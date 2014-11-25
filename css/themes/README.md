@@ -2,8 +2,8 @@ Making Windows Classic Themes
 =============================
 
 Theme files define the colour scheme of the theme and are written in
-[SASS][]. Theme files must be into CSS to be used
-in the Theme Designer. Refer to the [SASS documentation][sass-using]
+[Sass][]. Theme files must be into CSS to be used
+in the Theme Designer. Refer to the [Sass documentation][sass-using]
 for compilation instructions.
 
 [sass]:     http://sass-lang.com/
@@ -57,7 +57,7 @@ A standard theme file looks like this:
 
 
 It is best to stick with RGB decimal notation as doing so makes it easier
-to convert the SASS file to a Microsoft `.theme` file and vice versa,
+to convert the Sass file to a Microsoft `.theme` file and vice versa,
 but any valid CSS colour syntax is acceptable.
 
 
@@ -101,7 +101,7 @@ that looks something like this:
 The text before the `=` is the variable name and the numbers after are
 RGB decimal values for that colour.
 
-The easiest way to convert it to SASS is with a regex search-and-replace.
+The easiest way to convert it to Sass is with a regex search-and-replace.
 
 In Vim, this is a simple substitute command:
 
