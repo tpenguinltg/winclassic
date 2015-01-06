@@ -143,3 +143,48 @@
   */
   transform: translate(1px, 1px);
 }
+
+.scroll-pane {
+  display: table;
+  table-layout: fixed;
+}
+
+.scroll-pane-content, .scroll-pane>.scrollbar {
+  display: table-cell;
+}
+
+.scroll-pane-content {
+  overflow: hidden;
+}
+
+.scrollbar.hidden {
+  display: none;
+}
+
+.scrollbar .button {
+  min-width: 0;
+  min-height: 0;
+  line-height: 0;
+}
+
+.scrollbar-flex {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.verti-scroll>.scrollbar-flex {
+  flex-direction: column;
+}
+
+.horiz-scroll>.scrollbar-flex {
+  flex-direction: row;
+}
+
+.scroll-track {
+  flex-grow: 1;
+}
+
+.text-pane {
+  vertical-align: top;
+}
