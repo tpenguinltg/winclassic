@@ -16,3 +16,4 @@ This, of course, requires Windows. When I managed to finally install Arch Linux 
 Rebooting to Windows is highly impractical. My computer only has 4 GB of memory, so booting a virtual machine also wouldn't work very well. This tool is my solution to this problem.
 
 See also [Windows 93 – I plan to do better... eventually](https://tpenguinltg.wordpress.com/2014/10/28/windows-93/).
+I post my Windows themes on [DeviantArt](http://tpenguinltg.deviantart.com/) (all of my themes will make it on there eventually)
