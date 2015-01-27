@@ -144,9 +144,10 @@
   transform: translate(1px, 1px);
 }
 
-.scroll-pane {
+.scroll-pane-wrapper {
+  width: 100%;
+  height: 100%;
   display: table;
-  table-layout: fixed;
 }
 
 .scroll-pane-content, .scroll-pane>.scrollbar {
@@ -155,6 +156,8 @@
 
 .scroll-pane-content {
   overflow: hidden;
+  width: 100%;
+  height: 100%;
 }
 
 .scrollbar.hidden {
@@ -171,6 +174,14 @@
   display: flex;
   width: 100%;
   height: 100%;
+}
+
+.verti-scroll {
+  height: 100%;
+}
+
+.horiz-scroll {
+  width: 100%;
 }
 
 .verti-scroll>.scrollbar-flex {

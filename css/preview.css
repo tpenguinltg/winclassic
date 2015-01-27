@@ -38,5 +38,6 @@
 }
 
 #active-scroll-pane {
+  display: block;
   flex-grow: 1;
 }

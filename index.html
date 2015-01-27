@@ -70,11 +70,15 @@
         <!-- Content -->
         <div class="window-area">
           <div class="scroll-pane" id="active-scroll-pane">
-            <div class="text-pane scroll-pane-content" id="active-textarea">
-              <p style="font-weight: bold;">Window Text</p>
+            <div class="scroll-pane-wrapper">
+              <div class="text-pane scroll-pane-content" id="active-textarea">
+                <p style="font-weight: bold;">Window Text</p>
+              </div>
+
+              <!-- Scroll bar -->
+              <div class="scrollbar verti-scroll"><div class="scrollbar-flex"><div class="button scroll-up"><img src="img/up.svg" alt="↑" /></div><div class="scroll-track"></div><div class="button scroll-down"><img src="img/down.svg" alt="↓" /></div></div></div>
+              <div class="scrollbar horiz-scroll hidden"></div>
             </div>
-            <div class="scrollbar verti-scroll"><div class="scrollbar-flex"><div class="button scroll-up"><img src="img/up.svg" alt="↑" /></div><div class="scroll-track"></div><div class="button scroll-down"><img src="img/down.svg" alt="↓" /></div></div></div>
-            <div class="scrollbar horiz-scroll hidden"></div>
           </div>
         </div>
       </div>

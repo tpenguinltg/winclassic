@@ -90,14 +90,16 @@
   box-shadow: none; }
 
 /* Scrollbar */
-.scrollbar.verti-scroll {
-  width: 16px; }
-.scrollbar.horiz-scroll {
-  height: 16px; }
-.scrollbar .button {
-  box-shadow: -0.5px -0.5px 0px 0.5px #fdfaf8, 0px 0px 0px 1px #b3afab, -0.5px -0.5px 0px 1.5px #efebe7, 0px 0px 0px 2px #736a60;
-  /* sic */ }
-  .scrollbar .button:active {
-    box-shadow: -0.5px -0.5px 0px 0.5px #736a60, 0px 0px 0px 1px #efebe7, -0.5px -0.5px 0px 1.5px #b3afab, 0px 0px 0px 2px #fdfaf8; }
+.scrollbar {
+  background-color: #cbc1b7; }
+  .scrollbar.verti-scroll {
+    width: 16px; }
+  .scrollbar.horiz-scroll {
+    height: 16px; }
+  .scrollbar .button {
+    box-shadow: -0.5px -0.5px 0px 0.5px #fdfaf8, 0px 0px 0px 1px #b3afab, -0.5px -0.5px 0px 1.5px #efebe7, 0px 0px 0px 2px #736a60;
+    /* sic */ }
+    .scrollbar .button:active {
+      box-shadow: -0.5px -0.5px 0px 0.5px #736a60, 0px 0px 0px 1px #efebe7, -0.5px -0.5px 0px 1.5px #b3afab, 0px 0px 0px 2px #fdfaf8; }
 
 /*# sourceMappingURL=ubuntu-human.css.map */

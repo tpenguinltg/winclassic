@@ -163,6 +163,8 @@
 /* Scrollbar */
 .scrollbar {
 
+  background-color: $Scrollbar;
+
   &.verti-scroll {
     width: 16px;
   }

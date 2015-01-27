@@ -87,14 +87,16 @@
   box-shadow: none; }
 
 /* Scrollbar */
-.scrollbar.verti-scroll {
-  width: 16px; }
-.scrollbar.horiz-scroll {
-  height: 16px; }
-.scrollbar .button {
-  box-shadow: -0.5px -0.5px 0px 0.5px gray, 0px 0px 0px 1px #202020, -0.5px -0.5px 0px 1.5px #606060, 0px 0px 0px 2px black;
-  /* sic */ }
-  .scrollbar .button:active {
-    box-shadow: -0.5px -0.5px 0px 0.5px black, 0px 0px 0px 1px #606060, -0.5px -0.5px 0px 1.5px #202020, 0px 0px 0px 2px gray; }
+.scrollbar {
+  background-color: #404040; }
+  .scrollbar.verti-scroll {
+    width: 16px; }
+  .scrollbar.horiz-scroll {
+    height: 16px; }
+  .scrollbar .button {
+    box-shadow: -0.5px -0.5px 0px 0.5px gray, 0px 0px 0px 1px #202020, -0.5px -0.5px 0px 1.5px #606060, 0px 0px 0px 2px black;
+    /* sic */ }
+    .scrollbar .button:active {
+      box-shadow: -0.5px -0.5px 0px 0.5px black, 0px 0px 0px 1px #606060, -0.5px -0.5px 0px 1.5px #202020, 0px 0px 0px 2px gray; }
 
 /*# sourceMappingURL=pltg-windows-hybrid-dark.css.map */

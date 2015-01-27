@@ -90,14 +90,16 @@
   box-shadow: none; }
 
 /* Scrollbar */
-.scrollbar.verti-scroll {
-  width: 16px; }
-.scrollbar.horiz-scroll {
-  height: 16px; }
-.scrollbar .button {
-  box-shadow: -0.5px -0.5px 0px 0.5px #a7c2e0, 0px 0px 0px 1px #a7c2e0, -0.5px -0.5px 0px 1.5px #a7c2e0, 0px 0px 0px 2px #a7c2e0;
-  /* sic */ }
-  .scrollbar .button:active {
-    box-shadow: -0.5px -0.5px 0px 0.5px #a7c2e0, 0px 0px 0px 1px #a7c2e0, -0.5px -0.5px 0px 1.5px #a7c2e0, 0px 0px 0px 2px #a7c2e0; }
+.scrollbar {
+  background-color: #a7c2e0; }
+  .scrollbar.verti-scroll {
+    width: 16px; }
+  .scrollbar.horiz-scroll {
+    height: 16px; }
+  .scrollbar .button {
+    box-shadow: -0.5px -0.5px 0px 0.5px #a7c2e0, 0px 0px 0px 1px #a7c2e0, -0.5px -0.5px 0px 1.5px #a7c2e0, 0px 0px 0px 2px #a7c2e0;
+    /* sic */ }
+    .scrollbar .button:active {
+      box-shadow: -0.5px -0.5px 0px 0.5px #a7c2e0, 0px 0px 0px 1px #a7c2e0, -0.5px -0.5px 0px 1.5px #a7c2e0, 0px 0px 0px 2px #a7c2e0; }
 
 /*# sourceMappingURL=seawater-soft.css.map */
