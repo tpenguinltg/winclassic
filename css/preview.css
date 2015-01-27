@@ -37,6 +37,7 @@
   fill: #000000;
 }
 
-#active-textarea {
+#active-scroll-pane {
+  display: block;
   flex-grow: 1;
 }

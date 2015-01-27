@@ -81,4 +81,25 @@
     font-size: 8px;
     font-weight: bold; }
 
+/* Scroll Pane */
+.scroll-pane {
+  margin: 2px;
+  box-shadow: -0.5px -0.5px 0px 0.5px black, 0px 0px 0px 1px #a6caf0, -0.5px -0.5px 0px 1.5px #3183dd, 0px 0px 0px 2px #d3e4f8; }
+
+.scroll-pane-content {
+  box-shadow: none; }
+
+/* Scrollbar */
+.scrollbar {
+  background-color: #d3e4f8; }
+  .scrollbar.verti-scroll {
+    width: 16px; }
+  .scrollbar.horiz-scroll {
+    height: 16px; }
+  .scrollbar .button {
+    box-shadow: -0.5px -0.5px 0px 0.5px #d3e4f8, 0px 0px 0px 1px #3183dd, -0.5px -0.5px 0px 1.5px #a6caf0, 0px 0px 0px 2px black;
+    /* sic */ }
+    .scrollbar .button:active {
+      box-shadow: -0.5px -0.5px 0px 0.5px black, 0px 0px 0px 1px #a6caf0, -0.5px -0.5px 0px 1.5px #3183dd, 0px 0px 0px 2px #d3e4f8; }
+
 /*# sourceMappingURL=blue.css.map */

@@ -148,3 +148,36 @@
       
   }//end .titlebar
 }//end .window.inactive
+
+/* Scroll Pane */
+.scroll-pane {
+  margin: 2px;
+
+  @include window-inset;
+}
+
+.scroll-pane-content {
+  box-shadow: none;
+}
+
+/* Scrollbar */
+.scrollbar {
+
+  background-color: $Scrollbar;
+
+  &.verti-scroll {
+    width: 16px;
+  }
+
+  &.horiz-scroll {
+    height: 16px;
+  }
+
+  .button {
+    @include window-outset; /* sic */
+
+    &:active {
+      @include window-inset;
+    }
+  }
+}

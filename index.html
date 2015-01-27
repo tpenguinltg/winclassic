@@ -17,11 +17,12 @@
   <!-- Windows Classic skeleton -->
   <link rel="stylesheet" type="text/css" href="./css/winclassic.css" />
   <!-- Windows Classic theme styles -->
-  <link rel="stylesheet" type="text/css" href="./css/themes/windows-standard.css" />
+  <link rel="stylesheet" type="text/css" href="./css/themes/windows-standard.css" id="theme-stylesheet" />
   <!-- Preview window dimensions -->
   <link rel="stylesheet" type="text/css" href="./css/preview.css" />
 
   <script type="text/javascript" src="./js/jquery-2.1.1.min.js"></script>
+  
   <script type="text/javascript" src="./js/update.js"></script>
 
 </head>
@@ -68,8 +69,16 @@
 
         <!-- Content -->
         <div class="window-area">
-          <div class="text-pane" id="active-textarea">
-            <p style="font-weight: bold;">Window Text</p>
+          <div class="scroll-pane" id="active-scroll-pane">
+            <div class="scroll-pane-wrapper">
+              <div class="text-pane scroll-pane-content" id="active-textarea">
+                <p style="font-weight: bold;">Window Text</p>
+              </div>
+
+              <!-- Scroll bar -->
+              <div class="scrollbar verti-scroll"><div class="scrollbar-flex"><div class="button scroll-up"><img src="img/up.svg" alt="↑" /></div><div class="scroll-track"></div><div class="button scroll-down"><img src="img/down.svg" alt="↓" /></div></div></div>
+              <div class="scrollbar horiz-scroll hidden"></div>
+            </div>
           </div>
         </div>
       </div>
