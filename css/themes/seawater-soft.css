@@ -35,9 +35,12 @@
   color: black;
   box-shadow: -0.5px -0.5px 0px 0.5px #a7c2e0, 0px 0px 0px 1px #a7c2e0, -0.5px -0.5px 0px 1.5px #a7c2e0, 0px 0px 0px 2px #a7c2e0; }
   .button:active {
-    box-shadow: -0.5px -0.5px 0px 0.5px #a7c2e0, 0px 0px 0px 1px #a7c2e0, -0.5px -0.5px 0px 1.5px #a7c2e0, 0px 0px 0px 2px #a7c2e0; }
+    box-shadow: -0.5px -0.5px 0px 0.5px #a7c2e0, 0px 0px 0px 1px #a7c2e0, -0.5px -0.5px 0px 1.5px black, 0px 0px 0px 2px black; }
   .button svg {
     fill: black; }
+
+.titlebar .button:active {
+  box-shadow: -0.5px -0.5px 0px 0.5px #a7c2e0, 0px 0px 0px 1px #a7c2e0, -0.5px -0.5px 0px 1.5px #a7c2e0, 0px 0px 0px 2px #a7c2e0; }
 
 .text-pane {
   margin: 2px 0;

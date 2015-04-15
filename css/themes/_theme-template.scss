@@ -1,3 +1,5 @@
+// TODO Fix button inset, fix for proper WindowFrame
+
 @mixin window-inset {
     box-shadow:
     -0.5px -0.5px 0px 0.5px $ButtonDkShadow,
@@ -14,12 +16,20 @@
     0px 0px 0px 2px $ButtonDkShadow;
 }
 
-@mixin button-inset {
+@mixin button-full-inset {
     box-shadow:
     -0.5px -0.5px 0px 0.5px $ButtonShadow,
     0px 0px 0px 1px $ButtonLight,
     -0.5px -0.5px 0px 1.5px $ButtonDkShadow,
     0px 0px 0px 2px $ButtonHilight;
+}
+
+@mixin button-inset {
+    box-shadow:
+    -0.5px -0.5px 0px 0.5px $ButtonShadow,
+    0px 0px 0px 1px $ButtonShadow,
+    -0.5px -0.5px 0px 1.5px $WindowFrame,
+    0px 0px 0px 2px $WindowFrame;
 }
 
 @mixin button-outset {
@@ -76,6 +86,12 @@
 
   svg {
     fill: $ButtonText;
+  }
+}
+
+.titlebar .button {
+  &:active {
+    @include button-full-inset;
   }
 }
 

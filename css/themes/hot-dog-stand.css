@@ -32,9 +32,12 @@
   color: black;
   box-shadow: -0.5px -0.5px 0px 0.5px red, 0px 0px 0px 1px #aa0000, -0.5px -0.5px 0px 1.5px #ff8080, 0px 0px 0px 2px black; }
   .button:active {
-    box-shadow: -0.5px -0.5px 0px 0.5px #aa0000, 0px 0px 0px 1px red, -0.5px -0.5px 0px 1.5px black, 0px 0px 0px 2px #ff8080; }
+    box-shadow: -0.5px -0.5px 0px 0.5px #aa0000, 0px 0px 0px 1px #aa0000, -0.5px -0.5px 0px 1.5px black, 0px 0px 0px 2px black; }
   .button svg {
     fill: black; }
+
+.titlebar .button:active {
+  box-shadow: -0.5px -0.5px 0px 0.5px #aa0000, 0px 0px 0px 1px red, -0.5px -0.5px 0px 1.5px black, 0px 0px 0px 2px #ff8080; }
 
 .text-pane {
   margin: 2px 0;
