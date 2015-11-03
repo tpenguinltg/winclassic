@@ -1,0 +1,105 @@
+/********** Colors **********/
+.desktop {
+  background-color: #a2dbd2;
+  font-family: Tahoma,"Microsoft Sans Serif","MS Sans Serif",sans-serif; }
+
+.window {
+  background-color: #f4c1ca;
+  color: black;
+  border-color: #f4c1ca;
+  font-size: 10px;
+  box-shadow: -0.5px -0.5px 0px 0.5px #fae0e4, 0px 0px 0px 1px #de4560, -0.5px -0.5px 0px 1.5px #f7dbd7, 0px 0px 0px 2px #404040; }
+
+.menubar {
+  background-color: #f4c1ca;
+  font-size: 10px; }
+
+.disabled {
+  color: #de4560; }
+
+.selected {
+  background-color: #a2dbd2;
+  color: black; }
+
+.titlebar .titlebar-title {
+  font-size: 10px;
+  height: 18px;
+  line-height: 18px;
+  font-weight: bold; }
+
+.button {
+  background-color: #f4c1ca;
+  color: black;
+  box-shadow: -0.5px -0.5px 0px 0.5px #f7dbd7, 0px 0px 0px 1px #de4560, -0.5px -0.5px 0px 1.5px #fae0e4, 0px 0px 0px 2px #404040; }
+  .button:active {
+    box-shadow: -0.5px -0.5px 0px 0.5px #de4560, 0px 0px 0px 1px #de4560, -0.5px -0.5px 0px 1.5px black, 0px 0px 0px 2px black; }
+  .button svg {
+    fill: black; }
+
+.titlebar .button:active {
+  box-shadow: -0.5px -0.5px 0px 0.5px #de4560, 0px 0px 0px 1px #f7dbd7, -0.5px -0.5px 0px 1.5px #404040, 0px 0px 0px 2px #fae0e4; }
+
+.text-pane {
+  margin: 2px 0;
+  padding: 2px;
+  background-color: #f4ffff;
+  color: black;
+  box-shadow: -0.5px -0.5px 0px 0.5px #404040, 0px 0px 0px 1px #f7dbd7, -0.5px -0.5px 0px 1.5px #de4560, 0px 0px 0px 2px #fae0e4; }
+  .text-pane p {
+    margin: 0; }
+
+.monospace {
+  font-family: "Lucida Console", monospace; }
+
+/* Active Window */
+.window.active {
+  border: 1px solid #f4c1ca; }
+  .window.active .titlebar .titlebar-icon {
+    background-color: #00bfbc;
+    color: white; }
+  .window.active .titlebar .titlebar-title {
+    background-color: #00bfbc;
+    background-image: linear-gradient(to right, #00bfbc, #ca9cb9);
+    color: white; }
+  .window.active .titlebar .titlebar-wincontrols, .window.active .titlebar .titlebar-wincontrols .buttons-wrapper {
+    background-color: #ca9cb9;
+    font-size: 8px;
+    font-weight: bold; }
+
+/* Inactive Window */
+.window.inactive {
+  border: 1px solid #f4c1ca; }
+  .window.inactive .titlebar .titlebar-icon {
+    background-color: #00bba9;
+    color: #00554d; }
+  .window.inactive .titlebar .titlebar-title {
+    background-color: #00bba9;
+    background-image: linear-gradient(to right, #00bba9, #ec91a2);
+    color: #00554d; }
+  .window.inactive .titlebar .titlebar-wincontrols, .window.inactive .titlebar .titlebar-wincontrols .buttons-wrapper {
+    background-color: #ec91a2;
+    font-size: 8px;
+    font-weight: bold; }
+
+/* Scroll Pane */
+.scroll-pane {
+  margin: 2px;
+  box-shadow: -0.5px -0.5px 0px 0.5px #404040, 0px 0px 0px 1px #f7dbd7, -0.5px -0.5px 0px 1.5px #de4560, 0px 0px 0px 2px #fae0e4; }
+
+.scroll-pane-content {
+  box-shadow: none; }
+
+/* Scrollbar */
+.scrollbar {
+  background-color: #fae0e4; }
+  .scrollbar.verti-scroll {
+    width: 16px; }
+  .scrollbar.horiz-scroll {
+    height: 16px; }
+  .scrollbar .button {
+    box-shadow: -0.5px -0.5px 0px 0.5px #fae0e4, 0px 0px 0px 1px #de4560, -0.5px -0.5px 0px 1.5px #f7dbd7, 0px 0px 0px 2px #404040;
+    /* sic */ }
+    .scrollbar .button:active {
+      box-shadow: -0.5px -0.5px 0px 0.5px #404040, 0px 0px 0px 1px #f7dbd7, -0.5px -0.5px 0px 1.5px #de4560, 0px 0px 0px 2px #fae0e4; }
+
+/*# sourceMappingURL=peggys-pastels.css.map */
