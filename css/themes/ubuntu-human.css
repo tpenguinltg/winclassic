@@ -1,108 +1,36 @@
 /* Name: Wine Human Theme
  * URL:  <https://wiki.ubuntu.com/WineHumanTheme>
  */
-/********** Colors **********/
-.desktop {
-  background-color: black;
-  font-family: Tahoma,"Microsoft Sans Serif","MS Sans Serif",sans-serif; }
-
-.window {
-  background-color: #efebe7;
-  color: black;
-  border-color: #efebe7;
-  font-size: 10px;
-  box-shadow: -0.5px -0.5px 0px 0.5px #fdfaf8, 0px 0px 0px 1px #b3afab, -0.5px -0.5px 0px 1.5px #efebe7, 0px 0px 0px 2px #736a60; }
-
-.menubar {
-  background-color: #efebe7;
-  font-size: 10px; }
-
-.disabled {
-  color: #b3afab; }
-
-.selected {
-  background-color: #f8ce8c;
-  color: black; }
-
-.titlebar .titlebar-title {
-  font-size: 10px;
-  height: 18px;
-  line-height: 18px;
-  font-weight: bold; }
-
-.button {
-  background-color: #efebe7;
-  color: black;
-  box-shadow: -0.5px -0.5px 0px 0.5px #efebe7, 0px 0px 0px 1px #b3afab, -0.5px -0.5px 0px 1.5px #fdfaf8, 0px 0px 0px 2px #736a60; }
-  .button:active {
-    box-shadow: -0.5px -0.5px 0px 0.5px #b3afab, 0px 0px 0px 1px #b3afab, -0.5px -0.5px 0px 1.5px black, 0px 0px 0px 2px black; }
-  .button svg {
-    fill: black; }
-
-.titlebar .button:active {
-  box-shadow: -0.5px -0.5px 0px 0.5px #b3afab, 0px 0px 0px 1px #efebe7, -0.5px -0.5px 0px 1.5px #736a60, 0px 0px 0px 2px #fdfaf8; }
-
-.text-pane {
-  margin: 2px 0;
-  padding: 2px;
-  background-color: white;
-  color: black;
-  box-shadow: -0.5px -0.5px 0px 0.5px #736a60, 0px 0px 0px 1px #efebe7, -0.5px -0.5px 0px 1.5px #b3afab, 0px 0px 0px 2px #fdfaf8; }
-  .text-pane p {
-    margin: 0; }
-
-.monospace {
-  font-family: "Lucida Console", monospace; }
-
-/* Active Window */
-.window.active {
-  border: 1px solid #efebe7; }
-  .window.active .titlebar .titlebar-icon {
-    background-color: #d28d46;
-    color: white; }
-  .window.active .titlebar .titlebar-title {
-    background-color: #d28d46;
-    background-image: linear-gradient(to right, #d28d46, #d28d46);
-    color: white; }
-  .window.active .titlebar .titlebar-wincontrols, .window.active .titlebar .titlebar-wincontrols .buttons-wrapper {
-    background-color: #d28d46;
-    font-size: 8px;
-    font-weight: bold; }
-
-/* Inactive Window */
-.window.inactive {
-  border: 1px solid #efebe7; }
-  .window.inactive .titlebar .titlebar-icon {
-    background-color: #efebe7;
-    color: #3c3c3b; }
-  .window.inactive .titlebar .titlebar-title {
-    background-color: #efebe7;
-    background-image: linear-gradient(to right, #efebe7, #efebe7);
-    color: #3c3c3b; }
-  .window.inactive .titlebar .titlebar-wincontrols, .window.inactive .titlebar .titlebar-wincontrols .buttons-wrapper {
-    background-color: #efebe7;
-    font-size: 8px;
-    font-weight: bold; }
-
-/* Scroll Pane */
-.scroll-pane {
-  margin: 2px;
-  box-shadow: -0.5px -0.5px 0px 0.5px #736a60, 0px 0px 0px 1px #efebe7, -0.5px -0.5px 0px 1.5px #b3afab, 0px 0px 0px 2px #fdfaf8; }
-
-.scroll-pane-content {
-  box-shadow: none; }
-
-/* Scrollbar */
-.scrollbar {
-  background-color: #cbc1b7; }
-  .scrollbar.verti-scroll {
-    width: 16px; }
-  .scrollbar.horiz-scroll {
-    height: 16px; }
-  .scrollbar .button {
-    box-shadow: -0.5px -0.5px 0px 0.5px #fdfaf8, 0px 0px 0px 1px #b3afab, -0.5px -0.5px 0px 1.5px #efebe7, 0px 0px 0px 2px #736a60;
-    /* sic */ }
-    .scrollbar .button:active {
-      box-shadow: -0.5px -0.5px 0px 0.5px #736a60, 0px 0px 0px 1px #efebe7, -0.5px -0.5px 0px 1.5px #b3afab, 0px 0px 0px 2px #fdfaf8; }
-
-/*# sourceMappingURL=ubuntu-human.css.map */
+:root {
+  --ActiveBorder: rgb(239,235,231);
+  --ActiveTitle: rgb(210,141,70);
+  --AppWorkspace: rgb(177,170,163);
+  --Background: rgb(0,0,0);
+  --ButtonAlternateFace: rgb(181,181,181);
+  --ButtonDkShadow: rgb(115,106,96);
+  --ButtonFace: rgb(239,235,231);
+  --ButtonHilight: rgb(253,250,248);
+  --ButtonLight: rgb(239,235,231);
+  --ButtonShadow: rgb(179,175,171);
+  --ButtonText: rgb(0,0,0);
+  --GradientActiveTitle: rgb(210,141,70);
+  --GradientInactiveTitle: rgb(239,235,231);
+  --GrayText: rgb(179,175,171);
+  --Hilight: rgb(248,206,140);
+  --HilightText: rgb(0,0,0);
+  --HotTrackingColor: rgb(253,250,248);
+  --InactiveBorder: rgb(239,235,231);
+  --InactiveTitle: rgb(239,235,231);
+  --InactiveTitleText: rgb(60,60,59);
+  --InfoText: rgb(0,0,0);
+  --InfoWindow: rgb(239,235,231);
+  --Menu: rgb(239,235,231);
+  --MenuBar: rgb(239,235,231);
+  --MenuHilight: rgb(248,245,242);
+  --MenuText: rgb(0,0,0);
+  --Scrollbar: rgb(203,193,183);
+  --TitleText: rgb(255,255,255);
+  --Window: rgb(255,255,255);
+  --WindowFrame: rgb(0,0,0);
+  --WindowText: rgb(0,0,0);
+}

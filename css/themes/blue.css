@@ -1,108 +1,36 @@
 /* Name: Blue
  * Author: tPenguinLTG
  */
-/********** Colors **********/
-.desktop {
-  background-color: #3a6ea5;
-  font-family: Tahoma,"Microsoft Sans Serif","MS Sans Serif",sans-serif; }
-
-.window {
-  background-color: #a6caf0;
-  color: black;
-  border-color: #a6caf0;
-  font-size: 10px;
-  box-shadow: -0.5px -0.5px 0px 0.5px #d3e4f8, 0px 0px 0px 1px #3183dd, -0.5px -0.5px 0px 1.5px #a6caf0, 0px 0px 0px 2px black; }
-
-.menubar {
-  background-color: #a6caf0;
-  font-size: 10px; }
-
-.disabled {
-  color: #3183dd; }
-
-.selected {
-  background-color: #3399ff;
-  color: white; }
-
-.titlebar .titlebar-title {
-  font-size: 10px;
-  height: 18px;
-  line-height: 18px;
-  font-weight: bold; }
-
-.button {
-  background-color: #a6caf0;
-  color: black;
-  box-shadow: -0.5px -0.5px 0px 0.5px #a6caf0, 0px 0px 0px 1px #3183dd, -0.5px -0.5px 0px 1.5px #d3e4f8, 0px 0px 0px 2px black; }
-  .button:active {
-    box-shadow: -0.5px -0.5px 0px 0.5px #3183dd, 0px 0px 0px 1px #3183dd, -0.5px -0.5px 0px 1.5px black, 0px 0px 0px 2px black; }
-  .button svg {
-    fill: black; }
-
-.titlebar .button:active {
-  box-shadow: -0.5px -0.5px 0px 0.5px #3183dd, 0px 0px 0px 1px #a6caf0, -0.5px -0.5px 0px 1.5px black, 0px 0px 0px 2px #d3e4f8; }
-
-.text-pane {
-  margin: 2px 0;
-  padding: 2px;
-  background-color: white;
-  color: black;
-  box-shadow: -0.5px -0.5px 0px 0.5px black, 0px 0px 0px 1px #a6caf0, -0.5px -0.5px 0px 1.5px #3183dd, 0px 0px 0px 2px #d3e4f8; }
-  .text-pane p {
-    margin: 0; }
-
-.monospace {
-  font-family: "Lucida Console", monospace; }
-
-/* Active Window */
-.window.active {
-  border: 1px solid #a6caf0; }
-  .window.active .titlebar .titlebar-icon {
-    background-color: navy;
-    color: white; }
-  .window.active .titlebar .titlebar-title {
-    background-color: navy;
-    background-image: linear-gradient(to right, navy, #1084d0);
-    color: white; }
-  .window.active .titlebar .titlebar-wincontrols, .window.active .titlebar .titlebar-wincontrols .buttons-wrapper {
-    background-color: #1084d0;
-    font-size: 8px;
-    font-weight: bold; }
-
-/* Inactive Window */
-.window.inactive {
-  border: 1px solid #a6caf0; }
-  .window.inactive .titlebar .titlebar-icon {
-    background-color: #3183dd;
-    color: navy; }
-  .window.inactive .titlebar .titlebar-title {
-    background-color: #3183dd;
-    background-image: linear-gradient(to right, #3183dd, #3183dd);
-    color: navy; }
-  .window.inactive .titlebar .titlebar-wincontrols, .window.inactive .titlebar .titlebar-wincontrols .buttons-wrapper {
-    background-color: #3183dd;
-    font-size: 8px;
-    font-weight: bold; }
-
-/* Scroll Pane */
-.scroll-pane {
-  margin: 2px;
-  box-shadow: -0.5px -0.5px 0px 0.5px black, 0px 0px 0px 1px #a6caf0, -0.5px -0.5px 0px 1.5px #3183dd, 0px 0px 0px 2px #d3e4f8; }
-
-.scroll-pane-content {
-  box-shadow: none; }
-
-/* Scrollbar */
-.scrollbar {
-  background-color: #d3e4f8; }
-  .scrollbar.verti-scroll {
-    width: 16px; }
-  .scrollbar.horiz-scroll {
-    height: 16px; }
-  .scrollbar .button {
-    box-shadow: -0.5px -0.5px 0px 0.5px #d3e4f8, 0px 0px 0px 1px #3183dd, -0.5px -0.5px 0px 1.5px #a6caf0, 0px 0px 0px 2px black;
-    /* sic */ }
-    .scrollbar .button:active {
-      box-shadow: -0.5px -0.5px 0px 0.5px black, 0px 0px 0px 1px #a6caf0, -0.5px -0.5px 0px 1.5px #3183dd, 0px 0px 0px 2px #d3e4f8; }
-
-/*# sourceMappingURL=blue.css.map */
+:root {
+  --ActiveTitle: rgb(0,0,128);
+  --Background: rgb(58,110,165);
+  --Hilight: rgb(51,153,255);
+  --HilightText: rgb(255,255,255);
+  --TitleText: rgb(255,255,255);
+  --Window: rgb(255,255,255);
+  --WindowText: rgb(0,0,0);
+  --Scrollbar: rgb(211,228,248);
+  --InactiveTitle: rgb(49,131,221);
+  --Menu: rgb(166,202,240);
+  --WindowFrame: rgb(0,0,0);
+  --MenuText: rgb(0,0,0);
+  --ActiveBorder: rgb(166,202,240);
+  --InactiveBorder: rgb(166,202,240);
+  --AppWorkspace: rgb(49,131,221);
+  --ButtonFace: rgb(166,202,240);
+  --ButtonShadow: rgb(49,131,221);
+  --GrayText: rgb(49,131,221);
+  --ButtonText: rgb(0,0,0);
+  --InactiveTitleText: rgb(0,0,128);
+  --ButtonHilight: rgb(211,228,248);
+  --ButtonDkShadow: rgb(0,0,0);
+  --ButtonLight: rgb(166,202,240);
+  --InfoText: rgb(0,0,0);
+  --InfoWindow: rgb(225,225,255);
+  --GradientActiveTitle: rgb(16,132,208);
+  --GradientInactiveTitle: rgb(49,131,221);
+  --ButtonAlternateFace: rgb(192,192,192);
+  --HotTrackingColor: rgb(0,0,128);
+  --MenuHilight: rgb(0,0,128);
+  --MenuBar: rgb(166,202,240);
+}

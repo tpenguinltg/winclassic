@@ -1,108 +1,36 @@
 /* Name: JS Teplate
  * Author: tPenguinLTG
  */
-/********** Colors **********/
-.desktop {
-  background-color: Background;
-  font-family: Tahoma,"Microsoft Sans Serif","MS Sans Serif",sans-serif; }
-
-.window {
-  background-color: ButtonFace;
-  color: WindowText;
-  border-color: ActiveBorder;
-  font-size: 10px;
-  box-shadow: -0.5px -0.5px 0px 0.5px ButtonHilight, 0px 0px 0px 1px ButtonShadow, -0.5px -0.5px 0px 1.5px ButtonLight, 0px 0px 0px 2px ButtonDkShadow; }
-
-.menubar {
-  background-color: Menu;
-  font-size: 10px; }
-
-.disabled {
-  color: GrayText; }
-
-.selected {
-  background-color: Hilight;
-  color: HilightText; }
-
-.titlebar .titlebar-title {
-  font-size: 10px;
-  height: 18px;
-  line-height: 18px;
-  font-weight: bold; }
-
-.button {
-  background-color: ButtonFace;
-  color: ButtonText;
-  box-shadow: -0.5px -0.5px 0px 0.5px ButtonLight, 0px 0px 0px 1px ButtonShadow, -0.5px -0.5px 0px 1.5px ButtonHilight, 0px 0px 0px 2px ButtonDkShadow; }
-  .button:active {
-    box-shadow: -0.5px -0.5px 0px 0.5px ButtonShadow, 0px 0px 0px 1px ButtonShadow, -0.5px -0.5px 0px 1.5px WindowFrame, 0px 0px 0px 2px WindowFrame; }
-  .button svg {
-    fill: ButtonText; }
-
-.titlebar .button:active {
-  box-shadow: -0.5px -0.5px 0px 0.5px ButtonShadow, 0px 0px 0px 1px ButtonLight, -0.5px -0.5px 0px 1.5px ButtonDkShadow, 0px 0px 0px 2px ButtonHilight; }
-
-.text-pane {
-  margin: 2px 0;
-  padding: 2px;
-  background-color: Window;
-  color: WindowText;
-  box-shadow: -0.5px -0.5px 0px 0.5px ButtonDkShadow, 0px 0px 0px 1px ButtonLight, -0.5px -0.5px 0px 1.5px ButtonShadow, 0px 0px 0px 2px ButtonHilight; }
-  .text-pane p {
-    margin: 0; }
-
-.monospace {
-  font-family: "Lucida Console", monospace; }
-
-/* Active Window */
-.window.active {
-  border: 1px solid ActiveBorder; }
-  .window.active .titlebar .titlebar-icon {
-    background-color: ActiveTitle;
-    color: TitleText; }
-  .window.active .titlebar .titlebar-title {
-    background-color: ActiveTitle;
-    background-image: linear-gradient(to right, ActiveTitle, GradientActiveTitle);
-    color: TitleText; }
-  .window.active .titlebar .titlebar-wincontrols, .window.active .titlebar .titlebar-wincontrols .buttons-wrapper {
-    background-color: GradientActiveTitle;
-    font-size: 8px;
-    font-weight: bold; }
-
-/* Inactive Window */
-.window.inactive {
-  border: 1px solid InactiveBorder; }
-  .window.inactive .titlebar .titlebar-icon {
-    background-color: InactiveTitle;
-    color: InactiveTitleText; }
-  .window.inactive .titlebar .titlebar-title {
-    background-color: InactiveTitle;
-    background-image: linear-gradient(to right, InactiveTitle, GradientInactiveTitle);
-    color: InactiveTitleText; }
-  .window.inactive .titlebar .titlebar-wincontrols, .window.inactive .titlebar .titlebar-wincontrols .buttons-wrapper {
-    background-color: GradientInactiveTitle;
-    font-size: 8px;
-    font-weight: bold; }
-
-/* Scroll Pane */
-.scroll-pane {
-  margin: 2px;
-  box-shadow: -0.5px -0.5px 0px 0.5px ButtonDkShadow, 0px 0px 0px 1px ButtonLight, -0.5px -0.5px 0px 1.5px ButtonShadow, 0px 0px 0px 2px ButtonHilight; }
-
-.scroll-pane-content {
-  box-shadow: none; }
-
-/* Scrollbar */
-.scrollbar {
-  background-color: Scrollbar; }
-  .scrollbar.verti-scroll {
-    width: 16px; }
-  .scrollbar.horiz-scroll {
-    height: 16px; }
-  .scrollbar .button {
-    box-shadow: -0.5px -0.5px 0px 0.5px ButtonHilight, 0px 0px 0px 1px ButtonShadow, -0.5px -0.5px 0px 1.5px ButtonLight, 0px 0px 0px 2px ButtonDkShadow;
-    /* sic */ }
-    .scrollbar .button:active {
-      box-shadow: -0.5px -0.5px 0px 0.5px ButtonDkShadow, 0px 0px 0px 1px ButtonLight, -0.5px -0.5px 0px 1.5px ButtonShadow, 0px 0px 0px 2px ButtonHilight; }
-
-/*# sourceMappingURL=jstemplate.css.map */
+:root {
+  --ActiveBorder:   ActiveBorder;
+  --ActiveTitle:    ActiveTitle;
+  --AppWorkspace:   AppWorkspace;
+  --Background:     Background;
+  --ButtonAlternateFace:   ButtonAlternateFace;
+  --ButtonDkShadow:   ButtonDkShadow;
+  --ButtonFace:     ButtonFace;
+  --ButtonHilight:  ButtonHilight;
+  --ButtonLight:    ButtonLight;
+  --ButtonShadow:   ButtonShadow;
+  --ButtonText:     ButtonText;
+  --GradientActiveTitle:   GradientActiveTitle;
+  --GradientInactiveTitle: GradientInactiveTitle;
+  --GrayText:       GrayText;
+  --Hilight:        Hilight;
+  --HilightText:    HilightText;
+  --HotTrackingColor:      HotTrackingColor;
+  --InactiveBorder: InactiveBorder;
+  --InactiveTitle:  InactiveTitle;
+  --InactiveTitleText:     InactiveTitleText;
+  --InfoText:       InfoText;
+  --InfoWindow:     InfoWindow;
+  --Menu:           Menu;
+  --MenuBar:        MenuBar;
+  --MenuHilight:    MenuHilight;
+  --MenuText:       MenuText;
+  --Scrollbar:      Scrollbar;
+  --TitleText:      TitleText;
+  --Window:         Window;
+  --WindowFrame:    WindowFrame;
+  --WindowText:     WindowText;
+}
