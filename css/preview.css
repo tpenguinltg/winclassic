@@ -33,10 +33,6 @@
   top: 133px;
 }
 
-.titlebar-wincontrols .button svg {
-  fill: #000000;
-}
-
 #active-scroll-pane {
   display: block;
   flex-grow: 1;

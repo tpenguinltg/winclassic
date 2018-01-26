@@ -5,29 +5,29 @@
 function makeSvgInline()
   {
     jQuery('img[src$=".svg"]').each(function(){
-        var  = jQuery(this);
-        var imgID = .attr('id');
-        var imgClass = .attr('class');
-        var imgURL = .attr('src');
+        var svg = jQuery(this);
+        var imgID = svg.attr('id');
+        var imgClass = svg.attr('class');
+        var imgURL = svg.attr('src');
 
         jQuery.get(imgURL, function(data) {
             // Get the SVG tag, ignore the rest
-            var  = jQuery(data).find('svg');
+            var realSvg = jQuery(data).find('svg');
 
             // Add replaced image's ID to the new SVG
             if(typeof imgID !== 'undefined') {
-                 = .attr('id', imgID);
+                realSvg = realSvg.attr('id', imgID);
             }
             // Add replaced image's classes to the new SVG
             if(typeof imgClass !== 'undefined') {
-                 = .attr('class', imgClass+' replaced-svg');
+                realSvg = realSvg.attr('class', imgClass+' replaced-svg');
             }
 
             // Remove any invalid XML tags as per http://validator.w3.org
-             = .removeAttr('xmlns:a');
+             realSvg = realSvg.removeAttr('xmlns:a');
 
             // Replace image with new SVG
-            .replaceWith();
+            svg.replaceWith(realSvg);
 
         }, 'xml');
 

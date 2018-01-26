@@ -33,7 +33,7 @@
   box-shadow: -0.5px -0.5px 0px 0.5px var(--ButtonLight), 0px 0px 0px 1px var(--ButtonShadow), -0.5px -0.5px 0px 1.5px var(--ButtonHilight), 0px 0px 0px 2px var(--ButtonDkShadow); }
   .button:active {
     box-shadow: -0.5px -0.5px 0px 0.5px var(--ButtonShadow), 0px 0px 0px 1px var(--ButtonShadow), -0.5px -0.5px 0px 1.5px var(--WindowFrame), 0px 0px 0px 2px var(--WindowFrame); }
-  .button svg {
+  .button svg path {
     fill: var(--ButtonText); }
 
 .titlebar .button:active {

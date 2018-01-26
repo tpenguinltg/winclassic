@@ -84,7 +84,7 @@
     @include button-inset;
   }
 
-  svg {
+  svg path {
     fill: var(--ButtonText);
   }
 }
