@@ -22,12 +22,11 @@ function WinClassicTheme() {
 
 Object.setPrototypeOf(WinClassicTheme.prototype, Theme.prototype);
 
-WinClassicTheme.prototype.onColorChange = function(exportDestination, e) {
+WinClassicTheme.prototype.onColorChange = function(e) {
   var name = e.target.dataset.item;
   var color = e.target.value;
   this.setItemColor(name, color);
   this.updateStylesheet(name);
-  exportDestination.value = this.exportToIni();
 }
 
 WinClassicTheme.prototype.exportToIni = function() {
