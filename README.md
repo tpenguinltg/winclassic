@@ -5,8 +5,6 @@ winclassic
 
 This tool allows you to design a Windows Classic theme without needing Windows' Window Appearance dialog. Currently, you can only customize the colours (which is really the most significant part of the theme), even the hidden ones.
 
-*More documentation will be added once there is something usable*
-
 Background
 ----------
 
@@ -17,3 +15,12 @@ Rebooting to Windows is highly impractical. My computer only has 4 GB of memory,
 
 See also [Windows 93 – I plan to do better... eventually](https://tpenguinltg.wordpress.com/2014/10/28/windows-93/).
 I post my Windows themes on [DeviantArt](http://tpenguinltg.deviantart.com/) (all of my themes will make it on there eventually)
+
+License
+-------
+
+Except where otherwise noted, this code is licensed under the MPLv2. See the [LICENSE](LICENSE) file for details.
+
+[jQuery](https://jquery.com/) is licensed under the MIT License. See the [LICENSE-jquery](LICENSE-jquery) file for details.
+
+[js/normalize-css-color.js](js/normalize-css-color.js) is a lightly modified version of [react-community/normalize-css-color](https://github.com/react-community/normalize-css-color) and is licensed under the 3-Clause BSD License. See the [LICENSE-normalize-css-color](LICENSE-normalize-css-color) file for details.

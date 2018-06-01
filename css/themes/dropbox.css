@@ -1,105 +1,36 @@
 /* Name:   Dropbox
  * Author: tPenguinLTG
  */
-/********** Colors **********/
-.desktop {
-  background-color: #007ee5;
-  font-family: Tahoma,"Microsoft Sans Serif","MS Sans Serif",sans-serif; }
-
-.window {
-  background-color: #cce5fb;
-  color: #47525d;
-  border-color: #7b8994;
-  font-size: 10px;
-  box-shadow: -0.5px -0.5px 0px 0.5px #e6f2fd, 0px 0px 0px 1px #3e9bf0, -0.5px -0.5px 0px 1.5px #cce5fb, 0px 0px 0px 2px #404040; }
-
-.menubar {
-  background-color: #cce5fb;
-  font-size: 10px; }
-
-.disabled {
-  color: #7b9394; }
-
-.selected {
-  background-color: #80bff2;
-  color: white; }
-
-.titlebar .titlebar-title {
-  font-size: 10px;
-  height: 18px;
-  line-height: 18px;
-  font-weight: bold; }
-
-.button {
-  background-color: #cce5fb;
-  color: #47525d;
-  box-shadow: -0.5px -0.5px 0px 0.5px #cce5fb, 0px 0px 0px 1px #3e9bf0, -0.5px -0.5px 0px 1.5px #e6f2fd, 0px 0px 0px 2px #404040; }
-  .button:active {
-    box-shadow: -0.5px -0.5px 0px 0.5px #3e9bf0, 0px 0px 0px 1px #cce5fb, -0.5px -0.5px 0px 1.5px #404040, 0px 0px 0px 2px #e6f2fd; }
-  .button svg {
-    fill: #47525d; }
-
-.text-pane {
-  margin: 2px 0;
-  padding: 2px;
-  background-color: white;
-  color: #47525d;
-  box-shadow: -0.5px -0.5px 0px 0.5px #404040, 0px 0px 0px 1px #cce5fb, -0.5px -0.5px 0px 1.5px #3e9bf0, 0px 0px 0px 2px #e6f2fd; }
-  .text-pane p {
-    margin: 0; }
-
-.monospace {
-  font-family: "Lucida Console", monospace; }
-
-/* Active Window */
-.window.active {
-  border: 1px solid #7b8994; }
-  .window.active .titlebar .titlebar-icon {
-    background-color: #007ee5;
-    color: white; }
-  .window.active .titlebar .titlebar-title {
-    background-color: #007ee5;
-    background-image: linear-gradient(to right, #007ee5, #007ee5);
-    color: white; }
-  .window.active .titlebar .titlebar-wincontrols, .window.active .titlebar .titlebar-wincontrols .buttons-wrapper {
-    background-color: #007ee5;
-    font-size: 8px;
-    font-weight: bold; }
-
-/* Inactive Window */
-.window.inactive {
-  border: 1px solid #cce5fb; }
-  .window.inactive .titlebar .titlebar-icon {
-    background-color: #80bff2;
-    color: white; }
-  .window.inactive .titlebar .titlebar-title {
-    background-color: #80bff2;
-    background-image: linear-gradient(to right, #80bff2, #80bff2);
-    color: white; }
-  .window.inactive .titlebar .titlebar-wincontrols, .window.inactive .titlebar .titlebar-wincontrols .buttons-wrapper {
-    background-color: #80bff2;
-    font-size: 8px;
-    font-weight: bold; }
-
-/* Scroll Pane */
-.scroll-pane {
-  margin: 2px;
-  box-shadow: -0.5px -0.5px 0px 0.5px #404040, 0px 0px 0px 1px #cce5fb, -0.5px -0.5px 0px 1.5px #3e9bf0, 0px 0px 0px 2px #e6f2fd; }
-
-.scroll-pane-content {
-  box-shadow: none; }
-
-/* Scrollbar */
-.scrollbar {
-  background-color: #e6f2fd; }
-  .scrollbar.verti-scroll {
-    width: 16px; }
-  .scrollbar.horiz-scroll {
-    height: 16px; }
-  .scrollbar .button {
-    box-shadow: -0.5px -0.5px 0px 0.5px #e6f2fd, 0px 0px 0px 1px #3e9bf0, -0.5px -0.5px 0px 1.5px #cce5fb, 0px 0px 0px 2px #404040;
-    /* sic */ }
-    .scrollbar .button:active {
-      box-shadow: -0.5px -0.5px 0px 0.5px #404040, 0px 0px 0px 1px #cce5fb, -0.5px -0.5px 0px 1.5px #3e9bf0, 0px 0px 0px 2px #e6f2fd; }
-
-/*# sourceMappingURL=dropbox.css.map */
+:root {
+  --ActiveBorder: rgb(123,137,148);
+  --ActiveTitle: rgb(0,126,229);
+  --AppWorkspace: rgb(62,155,240);
+  --Background: rgb(0,126,229);
+  --ButtonAlternateFace: rgb(192,192,192);
+  --ButtonDkShadow: rgb(64,64,64);
+  --ButtonFace: rgb(204,229,251);
+  --ButtonHilight: rgb(230,242,253);
+  --ButtonLight: rgb(204,229,251);
+  --ButtonShadow: rgb(62,155,240);
+  --ButtonText: rgb(71,82,93);
+  --GradientActiveTitle: rgb(0,126,229);
+  --GradientInactiveTitle: rgb(128,191,242);
+  --GrayText: rgb(123,147,148);
+  --Hilight: rgb(128,191,242);
+  --HilightText: rgb(255,255,255);
+  --HotTrackingColor: rgb(40,149,241);
+  --InactiveBorder: rgb(204,229,251);
+  --InactiveTitle: rgb(128,191,242);
+  --InactiveTitleText: rgb(255,255,255);
+  --InfoText: rgb(71,82,93);
+  --InfoWindow: rgb(245,250,254);
+  --Menu: rgb(204,229,251);
+  --MenuBar: rgb(204,229,251);
+  --MenuHilight: rgb(128,191,242);
+  --MenuText: rgb(71,82,93);
+  --Scrollbar: rgb(230,242,253);
+  --TitleText: rgb(255,255,255);
+  --Window: rgb(255,255,255);
+  --WindowFrame: rgb(0,0,0);
+  --WindowText: rgb(71,82,93);
+}

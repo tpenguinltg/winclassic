@@ -1,0 +1,36 @@
+/* Name: JS Teplate
+ * Author: tPenguinLTG
+ */
+:root {
+  --ActiveBorder:   ActiveBorder;
+  --ActiveTitle:    ActiveTitle;
+  --AppWorkspace:   AppWorkspace;
+  --Background:     Background;
+  --ButtonAlternateFace:   ButtonAlternateFace;
+  --ButtonDkShadow:   ButtonDkShadow;
+  --ButtonFace:     ButtonFace;
+  --ButtonHilight:  ButtonHilight;
+  --ButtonLight:    ButtonLight;
+  --ButtonShadow:   ButtonShadow;
+  --ButtonText:     ButtonText;
+  --GradientActiveTitle:   GradientActiveTitle;
+  --GradientInactiveTitle: GradientInactiveTitle;
+  --GrayText:       GrayText;
+  --Hilight:        Hilight;
+  --HilightText:    HilightText;
+  --HotTrackingColor:      HotTrackingColor;
+  --InactiveBorder: InactiveBorder;
+  --InactiveTitle:  InactiveTitle;
+  --InactiveTitleText:     InactiveTitleText;
+  --InfoText:       InfoText;
+  --InfoWindow:     InfoWindow;
+  --Menu:           Menu;
+  --MenuBar:        MenuBar;
+  --MenuHilight:    MenuHilight;
+  --MenuText:       MenuText;
+  --Scrollbar:      Scrollbar;
+  --TitleText:      TitleText;
+  --Window:         Window;
+  --WindowFrame:    WindowFrame;
+  --WindowText:     WindowText;
+}

@@ -1,0 +1,105 @@
+/********** Colors **********/
+.desktop {
+  background-color: var(--Background);
+  font-family: Tahoma,"Microsoft Sans Serif","MS Sans Serif",sans-serif; }
+
+.window {
+  background-color: var(--ButtonFace);
+  color: var(--WindowText);
+  border-color: var(--ActiveBorder);
+  font-size: 10px;
+  box-shadow: -0.5px -0.5px 0px 0.5px var(--ButtonHilight), 0px 0px 0px 1px var(--ButtonShadow), -0.5px -0.5px 0px 1.5px var(--ButtonLight), 0px 0px 0px 2px var(--ButtonDkShadow); }
+
+.menubar {
+  background-color: var(--Menu);
+  font-size: 10px; }
+
+.disabled {
+  color: var(--GrayText); }
+
+.selected {
+  background-color: var(--Hilight);
+  color: var(--HilightText); }
+
+.titlebar .titlebar-title {
+  font-size: 10px;
+  height: 18px;
+  line-height: 18px;
+  font-weight: bold; }
+
+.button {
+  background-color: var(--ButtonFace);
+  color: var(--ButtonText);
+  box-shadow: -0.5px -0.5px 0px 0.5px var(--ButtonLight), 0px 0px 0px 1px var(--ButtonShadow), -0.5px -0.5px 0px 1.5px var(--ButtonHilight), 0px 0px 0px 2px var(--ButtonDkShadow); }
+  .button:active {
+    box-shadow: -0.5px -0.5px 0px 0.5px var(--ButtonShadow), 0px 0px 0px 1px var(--ButtonShadow), -0.5px -0.5px 0px 1.5px var(--WindowFrame), 0px 0px 0px 2px var(--WindowFrame); }
+  .button svg path {
+    fill: var(--ButtonText); }
+
+.titlebar .button:active {
+  box-shadow: -0.5px -0.5px 0px 0.5px var(--ButtonShadow), 0px 0px 0px 1px var(--ButtonLight), -0.5px -0.5px 0px 1.5px var(--ButtonDkShadow), 0px 0px 0px 2px var(--ButtonHilight); }
+
+.text-pane {
+  margin: 2px 0;
+  padding: 2px;
+  background-color: var(--Window);
+  color: var(--WindowText);
+  box-shadow: -0.5px -0.5px 0px 0.5px var(--ButtonDkShadow), 0px 0px 0px 1px var(--ButtonLight), -0.5px -0.5px 0px 1.5px var(--ButtonShadow), 0px 0px 0px 2px var(--ButtonHilight); }
+  .text-pane p {
+    margin: 0; }
+
+.monospace {
+  font-family: "Lucida Console", monospace; }
+
+/* Active Window */
+.window.active {
+  border: 1px solid var(--ActiveBorder); }
+  .window.active .titlebar .titlebar-icon {
+    background-color: var(--ActiveTitle);
+    color: var(--TitleText); }
+  .window.active .titlebar .titlebar-title {
+    background-color: var(--ActiveTitle);
+    background-image: linear-gradient(to right, var(--ActiveTitle), var(--GradientActiveTitle));
+    color: var(--TitleText); }
+  .window.active .titlebar .titlebar-wincontrols, .window.active .titlebar .titlebar-wincontrols .buttons-wrapper {
+    background-color: var(--GradientActiveTitle);
+    font-size: 8px;
+    font-weight: bold; }
+
+/* Inactive Window */
+.window.inactive {
+  border: 1px solid var(--InactiveBorder); }
+  .window.inactive .titlebar .titlebar-icon {
+    background-color: var(--InactiveTitle);
+    color: var(--InactiveTitleText); }
+  .window.inactive .titlebar .titlebar-title {
+    background-color: var(--InactiveTitle);
+    background-image: linear-gradient(to right, var(--InactiveTitle), var(--GradientInactiveTitle));
+    color: var(--InactiveTitleText); }
+  .window.inactive .titlebar .titlebar-wincontrols, .window.inactive .titlebar .titlebar-wincontrols .buttons-wrapper {
+    background-color: var(--GradientInactiveTitle);
+    font-size: 8px;
+    font-weight: bold; }
+
+/* Scroll Pane */
+.scroll-pane {
+  margin: 2px;
+  box-shadow: -0.5px -0.5px 0px 0.5px var(--ButtonDkShadow), 0px 0px 0px 1px var(--ButtonLight), -0.5px -0.5px 0px 1.5px var(--ButtonShadow), 0px 0px 0px 2px var(--ButtonHilight); }
+
+.scroll-pane-content {
+  box-shadow: none; }
+
+/* Scrollbar */
+.scrollbar {
+  background-color: var(--Scrollbar); }
+  .scrollbar.verti-scroll {
+    width: 16px; }
+  .scrollbar.horiz-scroll {
+    height: 16px; }
+  .scrollbar .button {
+    box-shadow: -0.5px -0.5px 0px 0.5px var(--ButtonHilight), 0px 0px 0px 1px var(--ButtonShadow), -0.5px -0.5px 0px 1.5px var(--ButtonLight), 0px 0px 0px 2px var(--ButtonDkShadow);
+    /* sic */ }
+    .scrollbar .button:active {
+      box-shadow: -0.5px -0.5px 0px 0.5px var(--ButtonDkShadow), 0px 0px 0px 1px var(--ButtonLight), -0.5px -0.5px 0px 1.5px var(--ButtonShadow), 0px 0px 0px 2px var(--ButtonHilight); }
+
+/*# sourceMappingURL=theme-template.css.map */

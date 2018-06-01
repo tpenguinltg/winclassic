@@ -1,17 +1,13 @@
 Making Windows Classic Themes
 =============================
 
-Theme files define the colour scheme of the theme and are written in
-[Sass][]. Theme files must be into CSS to be used
-in the Theme Designer. Refer to the [Sass documentation][sass-using]
-for compilation instructions.
+Theme files define the colour scheme of the theme and are written as a
+list of [CSS variables][] set on the `:root` element. The names of the
+variables are the same as the [element names in the standard `.theme`
+file][control-panel-colors].
 
-[sass]:     http://sass-lang.com/
-[sass-using]: http://sass-lang.com/documentation/file.SASS_REFERENCE.html#using_sass
-
-Include `_theme-template.scss` in the same directory as your theme file.
-This file defines the skeleton styles of the theme and should not be
-modified.
+[CSS variables]: https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables
+[control-panel-colors]: https://msdn.microsoft.com/en-us/library/windows/desktop/bb773190%28v=vs.85%29.aspx#colors
 
 ## Example
 
@@ -21,39 +17,39 @@ A standard theme file looks like this:
      * Author: Microsoft
      */
 
-    $ActiveBorder:   rgb(212,208,200);
-    $ActiveTitle:    rgb( 10, 36,106);
-    $AppWorkspace:   rgb(128,128,128);
-    $Background:     rgb( 58,110,165);
-    $ButtonAlternateFace:   rgb(192,192,192);
-    $ButtonDkShadow: rgb( 64, 64, 64);
-    $ButtonFace:     rgb(212,208,200);
-    $ButtonHilight:  rgb(255,255,255);
-    $ButtonLight:    rgb(212,208,200);
-    $ButtonShadow:   rgb(128,128,128);
-    $ButtonText:     rgb(  0,  0,  0);
-    $GradientActiveTitle:   rgb(166,202,240);
-    $GradientInactiveTitle: rgb(192,192,192);
-    $GrayText:       rgb(128,128,128);
-    $Hilight:        rgb( 10, 36,106);
-    $HilightText:    rgb(255,255,255);
-    $HotTrackingColor:      rgb(  0,  0,128);
-    $InactiveBorder: rgb(212,208,200);
-    $InactiveTitle:  rgb(128,128,128);
-    $InactiveTitleText:     rgb(212,208,200);
-    $InfoText:       rgb(  0,  0,  0);
-    $InfoWindow:     rgb(255,255,225);
-    $Menu:           rgb(212,208,200);
-    $MenuBar:        rgb(192,192,192);
-    $MenuHilight:    rgb(  0,  0,128);
-    $MenuText:       rgb(  0,  0,  0);
-    $Scrollbar:      rgb(212,208,200);
-    $TitleText:      rgb(255,255,255);
-    $Window:         rgb(255,255,255);
-    $WindowFrame:    rgb(  0,  0,  0);
-    $WindowText:     rgb(  0,  0,  0);
-
-    @import "theme-template";
+    :root {
+      --ActiveBorder:   rgb(212,208,200);
+      --ActiveTitle:    rgb( 10, 36,106);
+      --AppWorkspace:   rgb(128,128,128);
+      --Background:     rgb( 58,110,165);
+      --ButtonAlternateFace:   rgb(192,192,192);
+      --ButtonDkShadow: rgb( 64, 64, 64);
+      --ButtonFace:     rgb(212,208,200);
+      --ButtonHilight:  rgb(255,255,255);
+      --ButtonLight:    rgb(212,208,200);
+      --ButtonShadow:   rgb(128,128,128);
+      --ButtonText:     rgb(  0,  0,  0);
+      --GradientActiveTitle:   rgb(166,202,240);
+      --GradientInactiveTitle: rgb(192,192,192);
+      --GrayText:       rgb(128,128,128);
+      --Hilight:        rgb( 10, 36,106);
+      --HilightText:    rgb(255,255,255);
+      --HotTrackingColor:      rgb(  0,  0,128);
+      --InactiveBorder: rgb(212,208,200);
+      --InactiveTitle:  rgb(128,128,128);
+      --InactiveTitleText:     rgb(212,208,200);
+      --InfoText:       rgb(  0,  0,  0);
+      --InfoWindow:     rgb(255,255,225);
+      --Menu:           rgb(212,208,200);
+      --MenuBar:        rgb(192,192,192);
+      --MenuHilight:    rgb(  0,  0,128);
+      --MenuText:       rgb(  0,  0,  0);
+      --Scrollbar:      rgb(212,208,200);
+      --TitleText:      rgb(255,255,255);
+      --Window:         rgb(255,255,255);
+      --WindowFrame:    rgb(  0,  0,  0);
+      --WindowText:     rgb(  0,  0,  0);
+    }
 
 
 It is best to stick with RGB decimal notation as doing so makes it easier
@@ -101,12 +97,19 @@ that looks something like this:
 The text before the `=` is the variable name and the numbers after are
 RGB decimal values for that colour.
 
-The easiest way to convert it to Sass is with a regex search-and-replace.
+The easiest way to convert it to CSS variables is with a regex search-and-replace.
 
 In Vim, this is a simple substitute command:
 
-    :s/\s*\(\a*\)\s*=\s*\(\d\{1,3})\s+\(\d\{1,3})\s+\(\d\{1,3})/$\1: rgb(\2,\3,\4);
+    :s/\s*\(\a*\)\s*=\s*\(\d\{1,3})\s+\(\d\{1,3})\s+\(\d\{1,3})/--\1: rgb(\2,\3,\4);
 
-Most importantly, add the following line to the end to import the skeleton:
+Lastly, enclose the result in a CSS declaration block, with `:root` as the selector:
 
-    @import "theme-template";
+    :root {
+      --ActiveBorder:   rgb(212,208,200);
+      --ActiveTitle:    rgb( 10, 36,106);
+      --AppWorkspace:   rgb(128,128,128);
+      --Background:     rgb( 58,110,165);
+      --ButtonAlternateFace:   rgb(192,192,192);
+      /* ... */
+    }

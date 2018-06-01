@@ -13,17 +13,28 @@
   <meta name="author" content="tPenguinLTG" />
 
   <!-- Main page styles -->
-  <link rel="stylesheet" type="text/css" href="./css/main.css" />
+  <link rel="stylesheet" href="./css/main.css" />
   <!-- Windows Classic skeleton -->
-  <link rel="stylesheet" type="text/css" href="./css/winclassic.css" />
+  <link rel="stylesheet" href="./css/winclassic.css" />
   <!-- Windows Classic theme styles -->
-  <link rel="stylesheet" type="text/css" href="./css/themes/windows-standard.css" id="theme-stylesheet" />
+  <link rel="stylesheet" href="./css/themes/theme-template.css" id="theme-template" />
+  <link rel="stylesheet" href="./css/themes/windows-standard.css" id="theme-colorscheme" />
   <!-- Preview window dimensions -->
-  <link rel="stylesheet" type="text/css" href="./css/preview.css" />
+  <link rel="stylesheet" href="./css/preview.css" />
 
-  <script type="text/javascript" src="./js/jquery-2.1.1.min.js"></script>
+  <script src="./js/jquery-2.1.1.min.js"></script>
+  <script src="./js/normalize-css-color.js"></script>
   
-  <script type="text/javascript" src="./js/update.js"></script>
+  <script src="./js/theme.js"></script>
+  <script src="./js/winclassic.js"></script>
+  <script src="./js/replace-svg.js"></script>
+
+  <script>
+    var winclassic;
+    window.onload = function() {
+      winclassic = new WinClassicTheme();
+    };
+  </script>
 
 </head>
 <body>
@@ -32,95 +43,156 @@
     <h1>Windows Classic Theme Designer</h1>
   </header>
 
-  <!-- Preview area -->
-  <div id="preview" class="desktop">
+  <main>
+    <div id="customizer">
+      <!-- Preview area -->
+      <div id="preview" class="desktop">
 
-    <!-- Inactive window -->
-    <div id="window-inactive" class="window inactive">
-      <div class="titlebar">
-        <span class="titlebar-title">Inactive Window</span>
-        <div class="titlebar-wincontrols">
-          <ul class="buttons-wrapper">
-            <li class="button minimize"><img src="./img/minimize.svg" alt="_" width="12" height="10" class="button-content" /></li><li class="button maximize"><img src="./img/maximize.svg" alt="+" width="12" height="10" class="button-content" /></li><li class="spacer"></li><li class="button close"><img src="./img/close.svg" alt="x" width="12" height="10" class="button-content" /></li>
-          </ul>
+        <!-- Inactive window -->
+        <div id="window-inactive" class="window inactive">
+          <div class="titlebar">
+            <span class="titlebar-title">Inactive Window</span>
+            <div class="titlebar-wincontrols">
+              <ul class="buttons-wrapper">
+                <li class="button minimize"><img src="./img/minimize.svg" alt="_" width="12" height="10" class="button-content" /></li><li class="button maximize"><img src="./img/maximize.svg" alt="+" width="12" height="10" class="button-content" /></li><li class="spacer"></li><li class="button close"><img src="./img/close.svg" alt="x" width="12" height="10" class="button-content" /></li>
+              </ul>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
 
-    <!-- Active window -->
-    <div id="window-active" class="window active">
-      <!-- Titlebar -->
-      <div class="titlebar">
-        <span class="titlebar-title">Active Window</span>
-        <div class="titlebar-wincontrols">
-          <ul class="buttons-wrapper">
-            <li class="button minimize"><img src="./img/minimize.svg" alt="_" width="12" height="10" class="button-content" /></li><li class="button maximize"><img src="./img/maximize.svg" alt="+" width="12" height="10" class="button-content" /></li><li class="spacer"></li><li class="button close"><img src="./img/close.svg" alt="x" width="12" height="10" class="button-content" /></li>
-          </ul>
-        </div>
-      </div>
+        <!-- Active window -->
+        <div id="window-active" class="window active">
+          <!-- Titlebar -->
+          <div class="titlebar">
+            <span class="titlebar-title">Active Window</span>
+            <div class="titlebar-wincontrols">
+              <ul class="buttons-wrapper">
+                <li class="button minimize"><img src="./img/minimize.svg" alt="_" width="12" height="10" class="button-content" /></li><li class="button maximize"><img src="./img/maximize.svg" alt="+" width="12" height="10" class="button-content" /></li><li class="spacer"></li><li class="button close"><img src="./img/close.svg" alt="x" width="12" height="10" class="button-content" /></li>
+              </ul>
+            </div>
+          </div>
 
-      <div class="window-content">
-        <!-- Menu bar -->
-        <ul class="menubar">
-          <li>Normal</li>
-          <li class="disabled">Disabled</li>
-          <li class="selected">Selected</li>
-        </ul>
+          <div class="window-content">
+            <!-- Menu bar -->
+            <ul class="menubar">
+              <li>Normal</li>
+              <li class="disabled">Disabled</li>
+              <li class="selected">Selected</li>
+            </ul>
 
-        <!-- Content -->
-        <div class="window-area">
-          <div class="scroll-pane" id="active-scroll-pane">
-            <div class="scroll-pane-wrapper">
-              <div class="text-pane scroll-pane-content" id="active-textarea">
-                <p style="font-weight: bold;">Window Text</p>
+            <!-- Content -->
+            <div class="window-area">
+              <div class="scroll-pane" id="active-scroll-pane">
+                <div class="scroll-pane-wrapper">
+                  <div class="text-pane scroll-pane-content" id="active-textarea">
+                    <p style="font-weight: bold;">Window Text</p>
+                  </div>
+
+                  <!-- Scroll bar -->
+                  <div class="scrollbar verti-scroll"><div class="scrollbar-flex"><div class="button scroll-up"><img src="img/up.svg" alt="↑" class="button-content" /></div><div class="scroll-track"></div><div class="button scroll-down"><img src="img/down.svg" alt="↓" class="button-content" /></div></div></div>
+                  <div class="scrollbar horiz-scroll hidden"></div>
+                </div>
               </div>
+            </div>
+          </div>
+        </div>
 
-              <!-- Scroll bar -->
-              <div class="scrollbar verti-scroll"><div class="scrollbar-flex"><div class="button scroll-up"><img src="img/up.svg" alt="↑" class="button-content" /></div><div class="scroll-track"></div><div class="button scroll-down"><img src="img/down.svg" alt="↓" class="button-content" /></div></div></div>
-              <div class="scrollbar horiz-scroll hidden"></div>
+        <!-- Dialog -->
+        <div id="window-dialog" class="window modal active">
+          <!-- Titlebar -->
+          <div class="titlebar">
+            <span class="titlebar-title">Message Box</span>
+            <div class="titlebar-wincontrols">
+              <ul class="buttons-wrapper">
+                <li class="button close"><img src="./img/close.svg" alt="x" width="12" height="10" class="button-content" /></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Message -->
+          <div class="window-content">
+            <div class="modal-content">
+              Message Text
+            </div>
+            <div class="modal-controls">
+              <ul class="buttons-wrapper">
+                <li class="button ok"><span class="button-content">OK</span></li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
+
+      <div id="controls">
+        <fieldset>
+          <legend>Button</legend>
+          <label><input type="color" name="ButtonAlternateFace" id="ButtonAlternateFace" class="color-item" data-item="ButtonAlternateFace"/> ButtonAlternateFace</label>
+          <label><input type="color" name="ButtonDkShadow" id="ButtonDkShadow" class="color-item" data-item="ButtonDkShadow"/> ButtonDkShadow</label>
+          <label><input type="color" name="ButtonFace" id="ButtonFace" class="color-item" data-item="ButtonFace"/> ButtonFace</label>
+          <label><input type="color" name="ButtonHilight" id="ButtonHilight" class="color-item" data-item="ButtonHilight"/> ButtonHilight</label>
+          <label><input type="color" name="ButtonLight" id="ButtonLight" class="color-item" data-item="ButtonLight"/> ButtonLight</label>
+          <label><input type="color" name="ButtonShadow" id="ButtonShadow" class="color-item" data-item="ButtonShadow"/> ButtonShadow</label>
+          <label><input type="color" name="ButtonText" id="ButtonText" class="color-item" data-item="ButtonText"/> ButtonText</label>
+        </fieldset>
+        <fieldset>
+          <legend>Window</legend>
+          <label><input type="color" name="ActiveBorder" id="ActiveBorder" class="color-item" data-item="ActiveBorder"/> ActiveBorder</label>
+          <label><input type="color" name="AppWorkspace" id="AppWorkspace" class="color-item" data-item="AppWorkspace"/> AppWorkspace</label>
+          <label><input type="color" name="Background" id="Background" class="color-item" data-item="Background"/> Background</label>
+          <label><input type="color" name="InactiveBorder" id="InactiveBorder" class="color-item" data-item="InactiveBorder"/> InactiveBorder</label>
+          <label><input type="color" name="Scrollbar" id="Scrollbar" class="color-item" data-item="Scrollbar"/> Scrollbar</label>
+          <label><input type="color" name="Window" id="Window" class="color-item" data-item="Window"/> Window</label>
+          <label><input type="color" name="WindowFrame" id="WindowFrame" class="color-item" data-item="WindowFrame"/> WindowFrame</label>
+          <label><input type="color" name="WindowText" id="WindowText" class="color-item" data-item="WindowText"/> WindowText</label>
+        </fieldset>
+        <fieldset>
+          <legend>Title Bar</legend>
+          <label><input type="color" name="ActiveTitle" id="ActiveTitle" class="color-item" data-item="ActiveTitle"/> ActiveTitle</label>
+          <label><input type="color" name="GradientActiveTitle" id="GradientActiveTitle" class="color-item" data-item="GradientActiveTitle"/> GradientActiveTitle</label>
+          <label><input type="color" name="GradientInactiveTitle" id="GradientInactiveTitle" class="color-item" data-item="GradientInactiveTitle"/> GradientInactiveTitle</label>
+          <label><input type="color" name="InactiveTitle" id="InactiveTitle" class="color-item" data-item="InactiveTitle"/> InactiveTitle</label>
+          <label><input type="color" name="InactiveTitleText" id="InactiveTitleText" class="color-item" data-item="InactiveTitleText"/> InactiveTitleText</label>
+          <label><input type="color" name="TitleText" id="TitleText" class="color-item" data-item="TitleText"/> TitleText</label>
+        </fieldset>
+        <fieldset>
+          <legend>Menu</legend>
+          <label><input type="color" name="Menu" id="Menu" class="color-item" data-item="Menu"/> Menu</label>
+          <label><input type="color" name="MenuBar" id="MenuBar" class="color-item" data-item="MenuBar"/> MenuBar</label>
+          <label><input type="color" name="MenuHilight" id="MenuHilight" class="color-item" data-item="MenuHilight"/> MenuHilight</label>
+          <label><input type="color" name="MenuText" id="MenuText" class="color-item" data-item="MenuText"/> MenuText</label>
+        </fieldset>
+        <fieldset>
+          <legend>Text</legend>
+          <label><input type="color" name="GrayText" id="GrayText" class="color-item" data-item="GrayText"/> GrayText</label>
+          <label><input type="color" name="Hilight" id="Hilight" class="color-item" data-item="Hilight"/> Hilight</label>
+          <label><input type="color" name="HilightText" id="HilightText" class="color-item" data-item="HilightText"/> HilightText</label>
+          <label><input type="color" name="HotTrackingColor" id="HotTrackingColor" class="color-item" data-item="HotTrackingColor"/> HotTrackingColor</label>
+        </fieldset>
+        <fieldset>
+          <legend>Tooltip</legend>
+          <label><input type="color" name="InfoText" id="InfoText" class="color-item" data-item="InfoText"/> InfoText</label>
+          <label><input type="color" name="InfoWindow" id="InfoWindow" class="color-item" data-item="InfoWindow"/> InfoWindow</label>
+        </fieldset>
+
+      </div>
     </div>
 
-    <!-- Dialog -->
-    <div id="window-dialog" class="window modal active">
-      <!-- Titlebar -->
-      <div class="titlebar">
-        <span class="titlebar-title">Message Box</span>
-        <div class="titlebar-wincontrols">
-          <ul class="buttons-wrapper">
-            <li class="button close"><img src="./img/close.svg" alt="x" width="12" height="10" class="button-content" /></li>
-          </ul>
-        </div>
-      </div>
+    <hr />
 
-      <!-- Message -->
-      <div class="window-content">
-        <div class="modal-content">
-          Message Text
-        </div>
-        <div class="modal-controls">
-          <ul class="buttons-wrapper">
-            <li class="button ok"><span class="button-content">OK</span></li>
-          </ul>
-        </div>
-      </div>
+    <div id="ini-code">
+      <h2><code>[Control Panel\Colors]</code></h2>
+
+      <textarea id="export" rows="31" cols="40" readonly="readonly"></textarea>
     </div>
-  </div>
-  
-  <div id="controls">
-    <!--TODO implement configuration interface-->
-    <p class="temp" style="font-style: italic;">Controls here</p>
-  </div>
-
-  <hr />
+  </main>
 
   <footer>
-    <p>View the source on <a href="https://github.com/tpenguinltg/winclassic">GitHub</a>.</p>
+    <hr />
+
+    <p>Created by <a href="http://tpenguinltg.wordpress.com/">tPenguinLTG</a>. View the source on <a href="https://github.com/tpenguinltg/winclassic">GitHub</a>.</p>
   </footer>
 
+  <script> makeSvgInline(); </script>
 </body>
 </html>
 

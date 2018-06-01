@@ -2,3 +2,24 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
+#customizer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#controls {
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  flex-basis: 30em;
+}
+
+#controls fieldset {
+  display: inline-block;
+}
+
+#controls label {
+  display: block;
+  white-space: pre;
+}
