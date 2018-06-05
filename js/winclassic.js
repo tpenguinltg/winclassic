@@ -1,11 +1,11 @@
 function WinClassicTheme() {
   Theme.call(this);
 
-  var pickers = document.getElementsByClassName("color-item");
+  this.pickers = document.getElementsByClassName("color-item");
   var exportDestination = document.getElementById("export");
 
-  for (var i = 0; i < pickers.length; i++) {
-    var picker = pickers[i];
+  for (var i = 0; i < this.pickers.length; i++) {
+    var picker = this.pickers[i];
     var itemName = picker.dataset.item;
     this.updateFromStylesheet(itemName);
     picker.value = this.getItemColor(itemName);
@@ -37,4 +37,11 @@ WinClassicTheme.prototype.exportToIni = function() {
   }
 
   return ini.trim();
+}
+
+WinClassicTheme.prototype.resetPickers = function() {
+  for (var i = 0; i < this.pickers.length; i++) {
+    var picker = this.pickers[i];
+    picker.value = this.getItemColor(picker.dataset.item);
+  }
 }
