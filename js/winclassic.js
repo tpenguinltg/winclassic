@@ -3,6 +3,7 @@ function WinClassicTheme() {
 
   this.pickers = document.getElementsByClassName("color-item");
   var exportDestination = document.getElementById("export");
+  var importSource = document.getElementById("import");
 
   for (var i = 0; i < this.pickers.length; i++) {
     var picker = this.pickers[i];
@@ -16,6 +17,10 @@ function WinClassicTheme() {
   }
 
   exportDestination.value = this.exportToIni();
+
+  document.getElementById("import-action").onclick = function(e) {
+    this.importIniSection(importSource.value);
+  }.bind(this);
 
   return this;
 }
@@ -37,6 +42,25 @@ WinClassicTheme.prototype.exportToIni = function() {
   }
 
   return ini.trim();
+}
+
+WinClassicTheme.prototype.parseIniSection = function(content) {
+  return content.split('\n').reduce(function(items, line) {
+    var split = line.split('=');
+    items[split[0].trim()] = "rgb(" + split[1].trim().replace(/\s+/g, ',') + ")";
+
+    return items;
+  }, {});
+}
+
+WinClassicTheme.prototype.importIniSection = function(content) {
+  var items = this.parseIniSection(content);
+  console.log(items);
+  for (var item in items) {
+    this.setItemColor(item, items[item]);
+    this.updateStylesheet(item);
+  }
+  this.resetPickers();
 }
 
 WinClassicTheme.prototype.resetPickers = function() {

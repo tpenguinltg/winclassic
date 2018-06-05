@@ -15,11 +15,15 @@
   flex-basis: 30em;
 }
 
-#controls fieldset {
+fieldset {
   display: inline-block;
 }
 
 #controls label {
   display: block;
   white-space: pre;
+}
+
+#import-action {
+  vertical-align: top;
 }
