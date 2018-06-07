@@ -12,7 +12,7 @@ function Theme(items) {
 
 Theme.prototype.setItemColor = function(item, color) {
   if (!this.items[item]) this.items[item] = {};
-  this.items[item].color = color;
+  this.items[item].color = toHexColor(window.normalizeColor(color) >>> 8);
 }
 
 Theme.prototype.getItemColor = function(item) {
@@ -33,7 +33,7 @@ Theme.prototype.updateStylesheet = function(itemName) {
 
 Theme.prototype.updateFromStylesheet = function(itemName) {
   function getItem(item) {
-    this.setItemColor(item, toHexColor(window.normalizeColor(window.getComputedStyle(document.documentElement).getPropertyValue("--" + item).trim()) >>> 8));
+    this.setItemColor(item, window.getComputedStyle(document.documentElement).getPropertyValue("--" + item).trim());
   }
 
   if (itemName)

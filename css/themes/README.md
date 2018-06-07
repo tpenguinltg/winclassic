@@ -97,11 +97,8 @@ that looks something like this:
 The text before the `=` is the variable name and the numbers after are
 RGB decimal values for that colour.
 
-The easiest way to convert it to CSS variables is with a regex search-and-replace.
-
-In Vim, this is a simple substitute command:
-
-    :s/\s*\(\a*\)\s*=\s*\(\d\{1,3})\s+\(\d\{1,3})\s+\(\d\{1,3})/--\1: rgb(\2,\3,\4);
+The easiest way to convert it to CSS variables is with a regex search-and-replace. If you put these lines in a file called `colors.txt`, this is a simple substitution with `sed`:
+    $ sed 's/^[[:space:]]*\([a-zA-Z]*\)[[:space:]]*=[[:space:]]*\([0-9]\{1,3\}\)[[:space:]]\{1,\}\([0-9]\{1,3\}\)[[:space:]]\{1,\}\([0-9]\{1,3\}\)[[:space:]]*$/--\1: rgb(\2,\3,\4);/' colors.txt
 
 Lastly, enclose the result in a CSS declaration block, with `:root` as the selector:
 
@@ -113,3 +110,11 @@ Lastly, enclose the result in a CSS declaration block, with `:root` as the selec
       --ButtonAlternateFace:   rgb(192,192,192);
       /* ... */
     }
+
+Given a `.theme` file (e.g. example.theme), the following `sed` invocation will convert the theme file to the above format:
+
+    $ sed '1i\
+    :root \{
+    1,/\[Control Panel\\Colors\]/d;/\[/,$d;s/^[[:space:]]*\([a-zA-Z]*\)[[:space:]]*=[[:space:]]*\([0-9]\{1,3\}\)[[:space:]]\{1,\}\([0-9]\{1,3\}\)[[:space:]]\{1,\}\([0-9]\{1,3\}\)[[:space:]]*$/  --\1: rgb(\2,\3,\4);/
+    $a\
+    }' example.theme
