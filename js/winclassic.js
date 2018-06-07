@@ -46,9 +46,9 @@ WinClassicTheme.prototype.exportToIni = function() {
 
 WinClassicTheme.prototype.parseIniSection = function(content) {
   return content.split('\n').reduce(function(items, line) {
-    var split = line.split('=');
-    items[split[0].trim()] = "rgb(" + split[1].trim().replace(/\s+/g, ',') + ")";
-
+    var parsed = line.match(/^\s*([A-Za-z]+)\s*=\s*((?:[1-9]|1\d|2[0-4])?\d|25[0-5])\s*((?:[1-9]|1\d|2[0-4])?\d|25[0-5])\s*((?:[1-9]|1\d|2[0-4])?\d|25[0-5])\s*$/);
+    if (parsed)
+      items[parsed[1]] = "rgb(" + parsed.slice(2).join() + ")";
     return items;
   }, {});
 }
