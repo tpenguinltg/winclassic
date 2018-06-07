@@ -2,7 +2,7 @@ function WinClassicTheme() {
   Theme.call(this);
 
   this.pickers = document.getElementsByClassName("color-item");
-  var exportDestination = document.getElementById("export");
+  this.exportDestination = document.getElementById("export");
   var importSource = document.getElementById("import");
 
   for (var i = 0; i < this.pickers.length; i++) {
@@ -11,12 +11,10 @@ function WinClassicTheme() {
     this.updateFromStylesheet(itemName);
     picker.value = this.getItemColor(itemName);
     picker.oninput = this.onColorChange.bind(this);
-    picker.onchange = function() {
-      exportDestination.value = this.exportToIni();
-    }.bind(this);
+    picker.onchange = this.displayExport.bind(this);
   }
 
-  exportDestination.value = this.exportToIni();
+  this.displayExport();
 
   document.getElementById("import-action").onclick = function(e) {
     this.importIniSection(importSource.value);
@@ -44,6 +42,10 @@ WinClassicTheme.prototype.exportToIni = function() {
   return ini.trim();
 }
 
+WinClassicTheme.prototype.displayExport = function() {
+  this.exportDestination.value = this.exportToIni();
+}
+
 WinClassicTheme.prototype.parseIniSection = function(content) {
   return content.split('\n').reduce(function(items, line) {
     var parsed = line.match(/^\s*([A-Za-z]+)\s*=\s*((?:[1-9]|1\d|2[0-4])?\d|25[0-5])\s*((?:[1-9]|1\d|2[0-4])?\d|25[0-5])\s*((?:[1-9]|1\d|2[0-4])?\d|25[0-5])\s*$/);
@@ -61,6 +63,7 @@ WinClassicTheme.prototype.importIniSection = function(content) {
     this.updateStylesheet(item);
   }
   this.resetPickers();
+  this.displayExport();
 }
 
 WinClassicTheme.prototype.resetPickers = function() {
