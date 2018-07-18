@@ -57,7 +57,6 @@ WinClassicTheme.prototype.parseIniSection = function(content) {
 
 WinClassicTheme.prototype.importIniSection = function(content) {
   var items = this.parseIniSection(content);
-  console.log(items);
   for (var item in items) {
     this.setItemColor(item, items[item]);
     this.updateStylesheet(item);
