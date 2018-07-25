@@ -97,8 +97,7 @@ that looks something like this:
 The text before the `=` is the variable name and the numbers after are
 RGB decimal values for that colour.
 
-The easiest way to convert it to CSS variables is with a regex search-and-replace. If you put these lines in a file called `colors.txt`, this is a simple substitution with `sed`:
-    $ sed 's/^[[:space:]]*\([a-zA-Z]*\)[[:space:]]*=[[:space:]]*\([0-9]\{1,3\}\)[[:space:]]\{1,\}\([0-9]\{1,3\}\)[[:space:]]\{1,\}\([0-9]\{1,3\}\)[[:space:]]*$/--\1: rgb(\2,\3,\4);/' colors.txt
+To change the section into the required CSS format, add `--` before each item name, change the `=` to a `:`, wrap the RGB triplet in `rgb()`, and separate the elements of the triplet with `,`.
 
 Lastly, enclose the result in a CSS declaration block, with `:root` as the selector:
 
@@ -111,10 +110,6 @@ Lastly, enclose the result in a CSS declaration block, with `:root` as the selec
       /* ... */
     }
 
-Given a `.theme` file (e.g. example.theme), the following `sed` invocation will convert the theme file to the above format:
+There is a script called `ini-to-css.sed` that will do the conversion for you:
 
-    $ sed '1i\
-    :root \{
-    1,/\[Control Panel\\Colors\]/d;/\[/,$d;s/^[[:space:]]*\([a-zA-Z]*\)[[:space:]]*=[[:space:]]*\([0-9]\{1,3\}\)[[:space:]]\{1,\}\([0-9]\{1,3\}\)[[:space:]]\{1,\}\([0-9]\{1,3\}\)[[:space:]]*$/  --\1: rgb(\2,\3,\4);/
-    $a\
-    }' example.theme
+    sed -nf ini-to-css.sed example.theme > example.css

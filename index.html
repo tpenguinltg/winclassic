@@ -13,21 +13,22 @@
   <meta name="author" content="tPenguinLTG" />
 
   <!-- Main page styles -->
-  <link rel="stylesheet" href="./css/main.css" />
+  <link rel="stylesheet" href="./styles/main.css" />
   <!-- Windows Classic skeleton -->
-  <link rel="stylesheet" href="./css/winclassic.css" />
+  <link rel="stylesheet" href="./styles/winclassic.css" />
   <!-- Windows Classic theme styles -->
-  <link rel="stylesheet" href="./css/themes/theme-template.css" id="theme-template" />
-  <link rel="stylesheet" href="./css/themes/windows-standard.css" id="theme-colorscheme" />
+  <link rel="stylesheet" href="./styles/themes/theme-template.css" id="theme-template" />
+  <link rel="stylesheet" href="./styles/themes/windows-standard.css" id="theme-colorscheme" />
   <!-- Preview window dimensions -->
-  <link rel="stylesheet" href="./css/preview.css" />
+  <link rel="stylesheet" href="./styles/preview.css" />
 
-  <script src="./js/jquery-2.1.1.min.js"></script>
-  <script src="./js/normalize-css-color.js"></script>
+  <script src="./scripts/jquery-2.1.1.min.js"></script>
+  <script src="./scripts/normalize-css-color.js"></script>
+  <script src="./scripts/color-conversion-algorithms.js"></script>
   
-  <script src="./js/theme.js"></script>
-  <script src="./js/winclassic.js"></script>
-  <script src="./js/replace-svg.js"></script>
+  <script src="./scripts/theme.js"></script>
+  <script src="./scripts/winclassic.js"></script>
+  <script src="./scripts/replace-svg.js"></script>
 
   <script>
     var winclassic;
@@ -54,7 +55,7 @@
             <span class="titlebar-title">Inactive Window</span>
             <div class="titlebar-wincontrols">
               <ul class="buttons-wrapper">
-                <li class="button minimize"><img src="./img/minimize.svg" alt="_" width="12" height="10" class="button-content" /></li><li class="button maximize"><img src="./img/maximize.svg" alt="+" width="12" height="10" class="button-content" /></li><li class="spacer"></li><li class="button close"><img src="./img/close.svg" alt="x" width="12" height="10" class="button-content" /></li>
+                <li class="button minimize"><img src="./images/minimize.svg" alt="_" width="12" height="10" class="button-content" /></li><li class="button maximize"><img src="./images/maximize.svg" alt="+" width="12" height="10" class="button-content" /></li><li class="spacer"></li><li class="button close"><img src="./images/close.svg" alt="x" width="12" height="10" class="button-content" /></li>
               </ul>
             </div>
           </div>
@@ -67,7 +68,7 @@
             <span class="titlebar-title">Active Window</span>
             <div class="titlebar-wincontrols">
               <ul class="buttons-wrapper">
-                <li class="button minimize"><img src="./img/minimize.svg" alt="_" width="12" height="10" class="button-content" /></li><li class="button maximize"><img src="./img/maximize.svg" alt="+" width="12" height="10" class="button-content" /></li><li class="spacer"></li><li class="button close"><img src="./img/close.svg" alt="x" width="12" height="10" class="button-content" /></li>
+                <li class="button minimize"><img src="./images/minimize.svg" alt="_" width="12" height="10" class="button-content" /></li><li class="button maximize"><img src="./images/maximize.svg" alt="+" width="12" height="10" class="button-content" /></li><li class="spacer"></li><li class="button close"><img src="./images/close.svg" alt="x" width="12" height="10" class="button-content" /></li>
               </ul>
             </div>
           </div>
@@ -89,7 +90,7 @@
                   </div>
 
                   <!-- Scroll bar -->
-                  <div class="scrollbar verti-scroll"><div class="scrollbar-flex"><div class="button scroll-up"><img src="img/up.svg" alt="↑" class="button-content" /></div><div class="scroll-track"></div><div class="button scroll-down"><img src="img/down.svg" alt="↓" class="button-content" /></div></div></div>
+                  <div class="scrollbar verti-scroll"><div class="scrollbar-flex"><div class="button scroll-up"><img src="images/up.svg" alt="↑" class="button-content" /></div><div class="scroll-track"></div><div class="button scroll-down"><img src="images/down.svg" alt="↓" class="button-content" /></div></div></div>
                   <div class="scrollbar horiz-scroll hidden"></div>
                 </div>
               </div>
@@ -104,7 +105,7 @@
             <span class="titlebar-title">Message Box</span>
             <div class="titlebar-wincontrols">
               <ul class="buttons-wrapper">
-                <li class="button close"><img src="./img/close.svg" alt="x" width="12" height="10" class="button-content" /></li>
+                <li class="button close"><img src="./images/close.svg" alt="x" width="12" height="10" class="button-content" /></li>
               </ul>
             </div>
           </div>
@@ -124,6 +125,9 @@
       </div>
 
       <div id="controls">
+        <div id="meta-controls">
+          <label><input type="checkbox" name="link-elements" id="link-elements" checked="checked" /> Link elements</label>
+        </div>
         <fieldset>
           <legend>Button</legend>
           <label><input type="color" name="ButtonAlternateFace" id="ButtonAlternateFace" class="color-item" data-item="ButtonAlternateFace"/> ButtonAlternateFace</label>

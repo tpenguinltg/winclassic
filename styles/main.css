@@ -15,6 +15,10 @@
   flex-basis: 30em;
 }
 
+#meta-controls {
+  flex-basis: 100%;
+}
+
 fieldset {
   display: inline-block;
 }
