@@ -1,9 +1,53 @@
+window.WinClassicTheme = (function(window) {
+
+function identity(x) { return x; }
+function multiplyBy(m) { return function(n) { return m * n; }; }
+var identityColor = {
+  type: "rgb",
+  r: identity,
+  g: identity,
+  b: identity,
+};
+var luminanceThreeHalves = {
+  type: "hsl",
+  h: identity,
+  s: identity,
+  l: multiplyBy(3/2),
+};
+var luminanceTwoThirds = {
+  type: "hsl",
+  h: identity,
+  s: identity,
+  l: multiplyBy(2/3),
+};
+var defaultLinkedElements = {
+  ButtonFace: {
+    // identity
+    ActiveBorder: identityColor,
+    ButtonLight: identityColor,
+    InactiveBorder: identityColor,
+    Menu: identityColor,
+
+    // 3/2 luminance
+    ButtonHilight: luminanceThreeHalves,
+    Scrollbar: luminanceThreeHalves,
+
+    // 2/3 luminance
+    AppWorkspace: luminanceTwoThirds,
+    ButtonShadow: luminanceTwoThirds,
+    GrayText: luminanceTwoThirds,
+    InactiveTitle: luminanceTwoThirds,
+  }
+}
+var noLinkedElements = {};
+
 function WinClassicTheme() {
   Theme.call(this);
+  var importSource = document.getElementById("import");
 
   this.pickers = document.getElementsByClassName("color-item");
   this.exportDestination = document.getElementById("export");
-  var importSource = document.getElementById("import");
+  this.linkElementsToggle = document.getElementById("link-elements");
 
   for (var i = 0; i < this.pickers.length; i++) {
     var picker = this.pickers[i];
@@ -15,9 +59,14 @@ function WinClassicTheme() {
   }
 
   this.displayExport();
+  this.enableLinkedElements(this.linkElementsToggle.checked);
 
   document.getElementById("import-action").onclick = function(e) {
     this.importIniSection(importSource.value);
+  }.bind(this);
+
+  this.linkElementsToggle.onchange = function(e) {
+    this.enableLinkedElements(e.target.checked);
   }.bind(this);
 
   return this;
@@ -29,7 +78,8 @@ WinClassicTheme.prototype.onColorChange = function(e) {
   var name = e.target.dataset.item;
   var color = e.target.value;
   this.setItemColor(name, color);
-  this.updateStylesheet(name);
+  this.updateStylesheet();
+  this.resetPickers();
 }
 
 WinClassicTheme.prototype.exportToIni = function() {
@@ -71,3 +121,10 @@ WinClassicTheme.prototype.resetPickers = function() {
     picker.value = this.getItemColor(picker.dataset.item);
   }
 }
+
+WinClassicTheme.prototype.enableLinkedElements = function(enable) {
+  this.linkedElements = (enable)? defaultLinkedElements : noLinkedElements;
+}
+
+return WinClassicTheme;
+})(window);
