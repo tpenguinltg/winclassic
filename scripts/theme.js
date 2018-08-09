@@ -80,11 +80,9 @@ Theme.prototype.rippleToLinkedElements = function(itemName) {
 
     var converter = colorComponentConversions[transformer.type];
     var convertedColor = converter.fromRgb(colorComponents.r, colorComponents.g, colorComponents.b);
-    console.log('DEBUG convertedColor', transformer.type, element , convertedColor);
     var transformedComponents = converter.components.map(function(component, i) {
       return transformer[component](convertedColor[i]);
     });
-    console.log('DEBUG transformedComponents', transformer.type, element, transformedComponents)
     var transformedColor = converter.toRgb.apply(null, transformedComponents);
     this.setItemColor(element, colorComponentConversions.rgb.toCssString.apply(null, transformedColor), false);
   }
