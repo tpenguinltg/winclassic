@@ -72,7 +72,8 @@ function WinClassicTheme() {
   return this;
 }
 
-Object.setPrototypeOf(WinClassicTheme.prototype, Theme.prototype);
+WinClassicTheme.prototype = Object.create(Theme.prototype);
+WinClassicTheme.prototype.constructor = WinClassicTheme;
 
 WinClassicTheme.prototype.onColorChange = function(e) {
   var name = e.target.dataset.item;
