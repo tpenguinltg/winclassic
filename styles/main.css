@@ -23,7 +23,7 @@ fieldset {
   display: inline-block;
 }
 
-#controls label {
+#controls fieldset label {
   display: block;
   white-space: pre;
 }
