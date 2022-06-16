@@ -5,6 +5,7 @@ function Theme(items) {
   if (Array.isArray(items))
     this.items = items.reduce(function(acc, item) {
       acc[item] = {color: "#000000"};
+      return acc;
     }, {});
   else
     this.items = {};

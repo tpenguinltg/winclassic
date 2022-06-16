@@ -20,7 +20,7 @@ var luminanceTwoThirds = {
   s: identity,
   l: multiplyBy(2/3),
 };
-var defaultLinkedElements = {
+var buttonLinkedElements = {
   ButtonFace: {
     // identity
     ActiveBorder: identityColor,
@@ -39,7 +39,23 @@ var defaultLinkedElements = {
     InactiveTitle: luminanceTwoThirds,
   }
 }
-var noLinkedElements = {};
+var titlebarLinkedElements = {
+  // active title
+  ActiveTitle: {
+    GradientActiveTitle: identityColor,
+  },
+  GradientActiveTitle: {
+    ActiveTitle: identityColor,
+  },
+
+  // inactive title
+  InactiveTitle: {
+    GradientInactiveTitle: identityColor,
+  },
+  GradientInactiveTitle: {
+    InactiveTitle: identityColor,
+  }
+};
 
 function WinClassicTheme() {
   Theme.call(this);
@@ -48,6 +64,7 @@ function WinClassicTheme() {
   this.pickers = document.getElementsByClassName("color-item");
   this.exportDestination = document.getElementById("export");
   this.linkElementsToggle = document.getElementById("link-elements");
+  this.useGradientsToggle = document.getElementById("use-gradients");
 
   for (var i = 0; i < this.pickers.length; i++) {
     var picker = this.pickers[i];
@@ -58,16 +75,21 @@ function WinClassicTheme() {
     picker.onchange = this.displayExport.bind(this);
   }
 
-  this.displayExport();
-  this.enableLinkedElements(this.linkElementsToggle.checked);
-
   document.getElementById("import-action").onclick = function(e) {
     this.importIniSection(importSource.value);
   }.bind(this);
 
-  this.linkElementsToggle.onchange = function(e) {
-    this.enableLinkedElements(e.target.checked);
-  }.bind(this);
+  var updateLinkedElements =
+    this.linkElementsToggle.onchange =
+    this.useGradientsToggle.onchange = function() {
+      this.enableLinkedElements({
+        button: this.linkElementsToggle.checked,
+        titlebar: !this.useGradientsToggle.checked,
+      });
+    }.bind(this);
+
+  this.displayExport();
+  updateLinkedElements();
 
   return this;
 }
@@ -129,8 +151,17 @@ WinClassicTheme.prototype.resetPickers = function() {
   }
 }
 
-WinClassicTheme.prototype.enableLinkedElements = function(enable) {
-  this.linkedElements = (enable)? defaultLinkedElements : noLinkedElements;
+WinClassicTheme.prototype.enableLinkedElements = function(types) {
+  var enabledElementLinks = {};
+
+  if (types.button) {
+    Object.assign(enabledElementLinks, buttonLinkedElements);
+  }
+  if (types.titlebar) {
+    Object.assign(enabledElementLinks, titlebarLinkedElements);
+  }
+
+  this.linkedElements = enabledElementLinks;
 }
 
 return WinClassicTheme;

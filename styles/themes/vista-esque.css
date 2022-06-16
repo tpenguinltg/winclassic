@@ -1,0 +1,33 @@
+:root {
+  --ActiveBorder: rgb(224,224,224);
+  --ActiveTitle: rgb(81,132,188);
+  --AppWorkspace: rgb(148,148,148);
+  --Background: rgb(58,110,165);
+  --ButtonAlternateFace: rgb(192,192,192);
+  --ButtonDkShadow: rgb(0,0,0);
+  --ButtonFace: rgb(224,224,224);
+  --ButtonHilight: rgb(240,240,240);
+  --ButtonLight: rgb(224,224,224);
+  --ButtonShadow: rgb(148,148,148);
+  --ButtonText: rgb(0,0,0);
+  --GradientActiveTitle: rgb(115,193,69);
+  --GradientInactiveTitle: rgb(18,91,30);
+  --GrayText: rgb(148,148,148);
+  --Hilight: rgb(49,106,197);
+  --HilightText: rgb(255,255,255);
+  --HotTrackingColor: rgb(0,0,128);
+  --InactiveBorder: rgb(224,224,224);
+  --InactiveTitle: rgb(22,46,101);
+  --InactiveTitleText: rgb(192,192,192);
+  --InfoText: rgb(0,0,0);
+  --InfoWindow: rgb(255,255,225);
+  --Menu: rgb(224,224,224);
+  --MenuBar: rgb(192,192,192);
+  --MenuHilight: rgb(0,0,128);
+  --MenuText: rgb(0,0,0);
+  --Scrollbar: rgb(240,240,240);
+  --TitleText: rgb(255,255,255);
+  --Window: rgb(255,255,255);
+  --WindowFrame: rgb(0,0,0);
+  --WindowText: rgb(0,0,0);
+}
