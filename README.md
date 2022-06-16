@@ -21,6 +21,4 @@ License
 
 Except where otherwise noted, this code is licensed under the MPLv2. See the [LICENSE](LICENSE) file for details.
 
-[jQuery](https://jquery.com/) is licensed under the MIT License. See the [LICENSE-jquery](LICENSE-jquery) file for details.
-
 [js/normalize-css-color.js](js/normalize-css-color.js) is a lightly modified version of [react-community/normalize-css-color](https://github.com/react-community/normalize-css-color) and is licensed under the 3-Clause BSD License. See the [LICENSE-normalize-css-color](LICENSE-normalize-css-color) file for details.
