@@ -65,6 +65,13 @@ function WinClassicTheme() {
   this.exportDestination = document.getElementById("export");
   this.linkElementsToggle = document.getElementById("link-elements");
   this.useGradientsToggle = document.getElementById("use-gradients");
+  this.undoButton = document.getElementById("undo-button");
+  this.redoButton = document.getElementById("redo-button");
+
+  this.undoButton.onclick = this.undo.bind(this);
+  this.undoButton.disabled = true;
+  this.redoButton.onclick = this.redo.bind(this);
+  this.redoButton.disabled = true;
 
   for (var i = 0; i < this.pickers.length; i++) {
     var picker = this.pickers[i];
@@ -72,7 +79,7 @@ function WinClassicTheme() {
     this.updateFromStylesheet(itemName);
     picker.value = this.getItemColor(itemName);
     picker.oninput = this.onColorChange.bind(this);
-    picker.onchange = this.displayExport.bind(this);
+    picker.onchange = this.onColorCommit.bind(this);
   }
 
   document.getElementById("import-action").onclick = function(e) {
@@ -91,6 +98,7 @@ function WinClassicTheme() {
   this.displayExport();
   updateLinkedElements();
 
+  this.commit();
   return this;
 }
 
@@ -109,6 +117,11 @@ WinClassicTheme.prototype.onColorChange = function(e) {
   this.setItemColor(name, color);
   this.updateStylesheet();
   this.resetPickers();
+}
+
+WinClassicTheme.prototype.onColorCommit = function() {
+  this.displayExport();
+  this.commit();
 }
 
 WinClassicTheme.prototype.exportToIni = function() {
@@ -141,6 +154,7 @@ WinClassicTheme.prototype.importIniSection = function(content) {
     this.updateStylesheet(item);
   }
   this.resetPickers();
+  this.commit();
   this.displayExport();
 }
 
@@ -162,6 +176,30 @@ WinClassicTheme.prototype.enableLinkedElements = function(types) {
   }
 
   this.linkedElements = enabledElementLinks;
+}
+
+WinClassicTheme.prototype.commit = function() {
+  Theme.prototype.commit.call(this);
+  this.undoButton.disabled = this.history.undoLength <= 0;
+  this.redoButton.disabled = this.history.redoLength <= 0;
+}
+
+WinClassicTheme.prototype.undo = function() {
+  Theme.prototype.undo.call(this);
+  this.updateStylesheet();
+  this.resetPickers();
+  this.displayExport();
+  this.undoButton.disabled = this.history.undoLength <= 0;
+  this.redoButton.disabled = this.history.redoLength <= 0;
+}
+
+WinClassicTheme.prototype.redo = function() {
+  Theme.prototype.redo.call(this);
+  this.updateStylesheet();
+  this.resetPickers();
+  this.displayExport();
+  this.undoButton.disabled = this.history.undoLength <= 0;
+  this.redoButton.disabled = this.history.redoLength <= 0;
 }
 
 return WinClassicTheme;
