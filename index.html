@@ -128,7 +128,7 @@
         <div id="meta-controls">
           <button id="undo-button" accesskey="u">Undo</button>
           <button id="redo-button" accesskey="r">Redo</button>
-          <label><input type="checkbox" name="link-elements" id="link-elements" checked="checked" /> Link elements</label>
+          <label><input type="checkbox" name="link-elements" id="link-elements" checked="checked" /> Calculate colors from ButtonFace</label>
           <label><input type="checkbox" name="use-gradients" id="use-gradients" checked="checked" /> Title bar gradients</label>
         </div>
         <fieldset>
@@ -189,14 +189,19 @@
     <div id="ini-code">
       <h2><code>[Control Panel\Colors]</code></h2>
 
-      <fieldset>
+      <fieldset class="ini-container">
         <legend>Export</legend>
+        <div class="actions">
+          <label>Name: <input id="theme-name" name="theme-name" value="My Theme" /></label><button id="download-theme-action">Download .theme</button>
+        </div>
         <textarea id="export" rows="31" cols="40" readonly="readonly"></textarea>
       </fieldset>
-      <fieldset>
+      <fieldset class="ini-container">
         <legend>Import</legend>
+        <div class="actions">
+          <button id="import-action">Import</button>
+        </div>
         <textarea id="import" rows="31" cols="40"></textarea>
-        <button id="import-action">Import</button>
       </fieldset>
     </div>
   </main>

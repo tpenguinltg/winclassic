@@ -28,6 +28,11 @@ fieldset {
   white-space: pre;
 }
 
-#import-action {
-  vertical-align: top;
+.ini-container textarea {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.ini-container .actions {
+  text-align: right;
 }
